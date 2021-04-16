@@ -8,7 +8,10 @@
 	<meta name="keywords" content="Front-end Developer, cv">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:image" content="">
-	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/normalize.css">
+	</noscript>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" href="#" type="image/png" sizes="">
 </head>
@@ -160,7 +163,7 @@
 			<div class="container greeting__container">
 				<h1 class="visually-hidden">Gumerova Elena, Front-end developer</h1>
 				<p class="greeting__text">
-					Hi, my name is <span class="text-color">Gumerova Elena</span>
+					Hi, my name is <span class="text-color typed"></span>
 					<br>
 					I'm a Front-end Developer.
 				</p>
@@ -215,6 +218,9 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+	<script src="js/typed.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
