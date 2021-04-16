@@ -58,7 +58,7 @@ body {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 100px 15px;
 }
 
 .visually-hidden {
@@ -73,18 +73,57 @@ body {
   clip-path: inset(100%);
 }
 
-.violet {
-  color: $color-primary;
+.text-color {
+  background-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn {
   @extend %btn;
 
+  position: relative;
   padding: 8px 16px;
   color: $color-primary;
   font-size: 24px;
   font-weight: $fw-bold;
   border: 2px solid $color-primary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &--color {
+    background-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
+    border-image-slice: 1;
+
+    &::after {
+      background-image: linear-gradient(135deg, #632cef, #8a4dd8);
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      -webkit-text-fill-color: $color-white;
+    }
+  }
 }
 
 // === HEADER ===
@@ -171,3 +210,42 @@ body {
 }
 
 // === / HEADER ===
+
+// === GREETING ===
+
+.greeting {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  &__container {
+    max-width: 1140px;
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 56px;
+    font-weight: $fw-bold;
+    line-height: 1.2;
+    //  font-size: 40px;
+  }
+}
+
+// === / GREETING ===
+// === ABOUT ===
+
+// === / ABOUT ===
+// === CERTIFICATES ===
+
+// === / CERTIFICATES ===
+// === SKILLS ===
+
+// === / SKILLS ===
+// === PORTFOLIO ===
+
+// === / PORTFOLIO ===
+// === EXPERIENCE ===
+
+// === / EXPERIENCE ===
