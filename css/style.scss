@@ -1,0 +1,89 @@
+// === PLACEHOLDERS ===
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%btn {
+  // позволяет задать вертик внутр отступы + ширина по содержанию
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  // ключаем принудительное наследование шрифта
+  font: inherit;
+  // убирает подчеркивание у ссылок
+  text-decoration: none;
+  background-color: transparent;
+  // рамка у кнопок
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+// === / PLACEHOLDERS ===
+
+// === VARIABLES ===
+
+// Font-weight
+$fw-regular: 400;
+$fw-bold: 700;
+
+// Colors
+$color-primary: #7510f7;
+$color-text: #272341;
+$color-white: #ffffff;
+
+$transition: 0.3s;
+// === / VARIABLES ===
+
+// === MIXINS ===
+@mixin montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+// === / MIXINS ===
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  @include montserrat;
+
+  font-weight: $fw-regular;
+  color: $color-text;
+  background-color: $color-white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 30px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+.violet {
+  color: $color-primary;
+}
+
+.btn {
+  @extend %btn;
+
+  padding: 8px 16px;
+  color: $color-primary;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  border: 2px solid $color-primary;
+}
+
