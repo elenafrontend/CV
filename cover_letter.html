@@ -6,6 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>HTML Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<style>
 		body {
 			width: 100% !important;
@@ -13,11 +15,16 @@
 			-ms-text-size-adjust: 100%;
 			margin: 0;
 			padding: 0;
-			line-height: 100%;
+			font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			/* line-height: 100%; */
+			font-size: 15px;
+			color: #45484d;
+			line-height: 1.4;
+
 		}
 
-		[style*="Open Sans"] {
-			font-family: 'Open Sans', arial, sans-serif !important;
+		[style*="Montserrat"] {
+			font-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 		}
 
 		img {
@@ -40,14 +47,383 @@
 			mso-table-lspace: 0pt;
 			mso-table-rspace: 0pt;
 		}
+
+		a {
+			color: #7510f7;
+			text-decoration: underline;
+		}
+
+		/* top border */
+
+		.border-top-left {
+			border-top-left-radius: 5px;
+		}
+
+		.border-top-right {
+			border-top-right-radius: 5px;
+		}
+
+
+		/* Content */
+		.content {
+			padding-top: 20px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 30px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		.name {
+			padding-bottom: 5px;
+			font-size: 21px;
+			line-height: 24px;
+		}
+
+		.position {
+			color: rgba(0, 0, 0, 0.4);
+			padding-bottom: 10px;
+		}
+
+		.border-center {
+			width: 100px;
+			border-top: 2px solid #8908fc;
+		}
+
+		.text {
+			padding-top: 15px;
+			text-indent: 20px;
+			letter-spacing: 0.3px;
+		}
+
+		.greeting {
+			padding-top: 25px;
+		}
+
+		.link {
+			padding-bottom: 20px;
+		}
+
+		.portfolio {
+			padding-bottom: 15px;
+		}
+
+		.portfolio-link {
+			display: table-cell;
+			padding-top: 15px;
+			padding-right: 30px;
+			padding-bottom: 15px;
+			padding-left: 30px;
+			color: #ffffff;
+			font-size: 16px;
+			letter-spacing: 0.3px;
+			text-decoration: none;
+			word-wrap: break-word;
+			background-color: #8908fc;
+			border-radius: 4px;
+		}
+
+		.contacts {
+			padding-top: 30px;
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		.phone {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-top: 1px solid rgba(34, 36, 38, .1);
+			border-bottom: 1px solid rgba(34, 36, 38, .1);
+		}
+
+		.icon {
+			padding-right: 8px;
+		}
+
+		.icon-label {
+			color: rgba(0, 0, 0, 0.5);
+			font-size: 18px;
+			text-decoration: none;
+		}
+
+		.bye {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.social {
+			padding-bottom: 35px;
+		}
+
+		.social__icon {
+			padding-left: 7px;
+			padding-right: 7px;
+		}
 	</style>
 </head>
 
 <body style="margin: 0; padding: 0;">
 	<div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое
 		письмо</div>
-	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ededed">
-		<table></table>
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2ebfc">
+		<tr>
+			<td>
+				<table class="body table-500" cellpadding="0" cellspacing="0" width="500" align="center">
+					<!-- Top indent -->
+					<tr>
+						<td width="500" height="100"></td>
+					</tr>
+					<!-- / Top indent -->
+
+					<!-- Letter -->
+					<tr>
+						<td>
+							<table class="main" cellpadding="0" cellspacing="0" width="500" align="center">
+
+								<!-- Photo tr -->
+								<tr>
+									<td>
+										<table class="photo" cellpadding="0" cellspacing="0" align="center">
+											<tr>
+												<!-- Top left border -->
+												<td>
+													<table cellpadding="0" cellspacing="0" width="175">
+														<tr>
+															<td height="75"></td>
+														</tr>
+														<tr bgcolor="ffffff">
+															<td class="border-top-left" height="75"></td>
+														</tr>
+													</table>
+												</td>
+												<!-- Photo -->
+												<td class="photo-td" align="center" width="150">
+													<img src="img/email/photo_circle_white.png" alt="photo Elena" height="150px" />
+												</td>
+												<!-- Top right border -->
+												<td>
+													<table cellpadding="0" cellspacing="0" width="175">
+														<tr>
+															<td height="75"></td>
+														</tr>
+														<tr bgcolor="ffffff">
+															<td class="border-top-right" height="75"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- / Photo tr -->
+
+								<!-- Content -->
+								<tr>
+									<td class="content" bgcolor="ffffff">
+										<table cellpadding="0" cellspacing="0" align="center">
+											<tr>
+												<td class="name" align="center">
+													Elena Gumerova
+												</td>
+											</tr>
+											<tr>
+												<td class="position" align="center"
+													style="font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;">
+													Junior Front-end Developer
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="border-center" cellpadding="0" cellspacing="0" width="150" align="center">
+														<tr>
+															<td></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td class="greeting" align="center">
+													Здравствуйте, ...! (имя рекрутера) / Уважаемый HR-менеджер!
+												</td>
+											</tr>
+											<tr>
+												<td class="present text" align="justify">
+													Я Junior Front-end разработчик и на данный момент в поиске компании, которой
+													мои
+													навыки
+													помогут
+													реализовывать классные проекты.
+												</td>
+											</tr>
+											<tr>
+												<td class="reason text" align="justify">
+													В любой сфере всегда есть пример, на который хочется равняться и именно
+													такого
+													уровня
+													проекты,
+													как
+													ваши (особенно мне понравились...), вдохновляют, и хочется использовать
+													возможность
+													стать
+													частью
+													такой команды.
+												</td>
+											</tr>
+											<tr>
+												<td class="about text" align="justify">
+													Я создаю адаптивную, оптимизированную и доступную верстку, мне нравится
+													оживлять
+													созданный
+													дизайнером макет, обращая внимание на детали и дополнять его возможностями
+													кода,
+													стараться
+													улучшать уже готовый результат.
+													<br />
+													Помимо основных навыков имею представление о работе сетей (OSI, TCP/IP,
+													DNS),
+													дружу с
+													Google,
+													а JS
+													научил терпеливо перепроверять код перед разрушением компьютера в случае
+													ошибки.
+													Мой предыдущий опыт работы в дизайне помогает в работе над UI, а опыт в
+													продажах и
+													маркетинге
+													- в
+													общении и понимании бизнес процессов компании и клиентов.
+												</td>
+											</tr>
+											<tr>
+												<td class="motivation text" align="justify">
+													Мне очень нравится моя работа и я заинтересована в развитии в этой профессии
+													-
+													здорово
+													что в
+													этой
+													сфере я могу бесконечно узнавать что-то новое и применять это на практике.
+												</td>
+											</tr>
+											<tr>
+												<td class="link text" align="justify">
+													Получить более подробную информацию, а также ознакомиться с моими проектами
+													Вы
+													можете, перейдя по <a href="#" title="Кнопка Portfolio">ссылке</a> ниже.
+												</td>
+											</tr>
+											<tr>
+												<td class="portfolio" align="center">
+													<a class="portfolio-link" href="#">Портфолио</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="link text" align="justify">
+													Если Вас
+													заинтересовала
+													моя кандидатура,
+													пожалуйста, свяжитесь со
+													мной любым удобным для Вас способом из нижеперечисленных.
+													Буду очень рада возможности личной встречи.
+												</td>
+											</tr>
+
+											<!-- Contacts -->
+											<tr>
+												<td>
+													<table class="contacts" cellpadding="0" cellspacing="0" align="center" width="100%">
+														<tr>
+															<td class="phone" align="center">
+																<table cellpadding="0" cellspacing="0" align="center" width="90%">
+																	<tr>
+																		<td align="left">
+																			<table cellpadding="0" cellspacing="0">
+																				<tr>
+																					<td class="icon icon-phone">
+																						<a href="tel:+79270337365">
+																							<img src="img/email/phone.png" alt="phone" height="18">
+																						</a>
+																					</td>
+																					<td class="icon-label">
+																						+7 927 033 73 65
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td align="right">
+																			<table cellpadding="0" cellspacing="0">
+																				<tr>
+																					<td class="icon">
+																						<a href="mailto: gumerova.e.p@ya.ru">
+																							<img src="img/email/email.png" alt="email" height="18">
+																						</a>
+																					</td>
+																					<td class="icon-label">
+																						gumerova.e.p@ya.ru
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td class="bye" align="center">
+																Хорошего Вам дня!
+															</td>
+														</tr>
+														<tr>
+															<td class="social">
+																<table cellpadding="0" cellspacing="0" align="center">
+																	<tr>
+																		<td class="icon social__icon" align="center">
+																			<a href="https://github.com/ElenaProject">
+																				<img src="img/email/github.png" alt="github">
+																			</a>
+																		</td>
+																		<td class="icon social__icon" align="center">
+																			<a href="https://www.linkedin.com/in/gumerovafrontend/">
+																				<img src="img/email/linkedin.png" alt="linkedin">
+																			</a>
+																		</td>
+																		<td class="icon social__icon" align="center">
+																			<a href="https://t.me/gumelena">
+																				<img src="img/email/telegram.png" alt="telegram">
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<!-- / Contacts -->
+
+										</table>
+									</td>
+								</tr>
+								<!-- / Content -->
+
+								<!-- Letter shadow -->
+								<tr>
+									<td>
+										<img src="img/email/shadow_compress.png" alt="">
+									</td>
+								</tr>
+								<!-- / Letter shadow -->
+							</table>
+						</td>
+					</tr>
+					<!-- / Letter -->
+
+					<!-- Bottom indent -->
+					<tr>
+						<td width="500" height="120"></td>
+					</tr>
+					<!-- / Bottom indent -->
+				</table>
+			</td>
+		</tr>
 	</table>
 </body>
 
