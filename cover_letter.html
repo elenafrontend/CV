@@ -49,8 +49,8 @@
 		}
 
 		a {
-			color: #7510f7;
-			text-decoration: none;
+			color: #6237ff;
+			text-decoration: none !important;
 		}
 
 		/* top border */
@@ -87,7 +87,7 @@
 
 		.border-center {
 			width: 100px;
-			border-top: 2px solid #8908fc;
+			border-top: 2px solid #6237ff;
 		}
 
 		.text {
@@ -119,20 +119,26 @@
 			letter-spacing: 0.3px;
 			text-decoration: none;
 			word-wrap: break-word;
-			background-color: #8908fc;
+			background-color: #6237ff;
 			border-radius: 4px;
 		}
 
 		.contacts {
 			padding-top: 30px;
-			color: rgba(0, 0, 0, 0.5);
+			color: #a8a8a8;
+		}
+
+		.border-grey {
+			height: 1px;
+			width: 100%;
+			background-color: #f2f2f2;
 		}
 
 		.phone {
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border-top: 1px solid rgba(34, 36, 38, .1);
-			border-bottom: 1px solid rgba(34, 36, 38, .1);
+			padding-top: 30px;
+			padding-bottom: 30px;
+			border-top: 1px solid #e7e7e7;
+			border-bottom: 1px solid #e7e7e7;
 		}
 
 		.icon {
@@ -140,13 +146,13 @@
 		}
 
 		.icon-label {
-			color: rgba(0, 0, 0, 0.5);
+			color: #959595;
 			font-size: 18px;
-			text-decoration: none !important;
+			text-decoration: none;
 		}
 
 		.bye {
-			padding-top: 15px;
+			padding-top: 35px;
 			padding-bottom: 15px;
 		}
 
@@ -164,7 +170,7 @@
 <body style="margin: 0; padding: 0;">
 	<div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое
 		письмо</div>
-	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2ebfc">
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2f2f2">
 		<tr>
 			<td>
 				<table class="body table-500" cellpadding="0" cellspacing="0" width="500" align="center">
@@ -234,9 +240,9 @@
 											</tr>
 											<tr>
 												<td>
-													<table class="border-center" cellpadding="0" cellspacing="0" width="150" align="center">
+													<table cellpadding="0" cellspacing="0" width="100" align="center">
 														<tr>
-															<td></td>
+															<td class="border-center"></td>
 														</tr>
 													</table>
 												</td>
@@ -331,6 +337,19 @@
 												<td>
 													<table class="contacts" cellpadding="0" cellspacing="0" align="center" width="100%">
 														<tr>
+															<td>
+																<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+																	<tr>
+																		<td height="15"></td>
+																	</tr>
+																	<tr>
+																		<td height="15"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+														<tr>
 															<td class="phone" align="center">
 																<table cellpadding="0" cellspacing="0" align="center" width="90%">
 																	<tr>
@@ -338,13 +357,15 @@
 																			<table cellpadding="0" cellspacing="0">
 																				<tr>
 																					<td class="icon icon-phone">
-																						<a href="tel:+79270337365">
+																						<a href="tel:+79270337365" style="text-decoration: none;  color: #959595">
 																							<img src="https://elenaproject.github.io/resume/img/email/phone.png"
-																								alt="phone" height="18">
+																								alt="phone">
 																						</a>
 																					</td>
 																					<td class="icon-label">
-																						+7 927 033 73 65
+																						<a href="tel:+79270337365" style="text-decoration: none;  color: #959595">
+																							+7 927 033 73 65
+																						</a>
 																					</td>
 																				</tr>
 																			</table>
@@ -356,11 +377,14 @@
 																					<td class="icon">
 																						<a href="mailto: gumerova.e.p@ya.ru">
 																							<img src="https://elenaproject.github.io/resume/img/email/email.png"
-																								alt="email" height="18">
+																								alt="email">
 																						</a>
 																					</td>
 																					<td class="icon-label">
-																						gumerova.e.p@ya.ru
+																						<a href="mailto:gumerova.e.p@ya.ru"
+																							style="text-decoration: none;  color: #959595">
+																							gumerova.e.p@ya.ru
+																						</a>
 																					</td>
 																				</tr>
 																			</table>
@@ -369,6 +393,11 @@
 																</table>
 															</td>
 														</tr>
+
+														<!-- <tr>
+															<td class="border-grey"></td>
+														</tr> -->
+
 														<tr>
 															<td class="bye" align="center">
 																Хорошего Вам дня!
@@ -413,7 +442,9 @@
 								<!-- Letter shadow -->
 								<tr>
 									<td>
-										<img src="https://elenaproject.github.io/resume/img/email/shadow_compress.png" alt="">
+										<img
+											src="https://elenaproject.github.io/resume/https://elenaproject.github.io/resume/img/email/email/shadow_compress.png"
+											alt="">
 									</td>
 								</tr>
 								<!-- / Letter shadow -->
