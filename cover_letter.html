@@ -92,6 +92,7 @@
 		}
 
 		.text {
+			width: 100%;
 			padding-top: 15px;
 			font-size: 15px;
 			color: #45484d;
@@ -112,27 +113,32 @@
 		}
 
 		.portfolio {
-			/* padding-bottom: 15px; */
-			/* padding-top: 15px;
-			padding-right: 30px;
-			padding-bottom: 15px;
-			padding-left: 30px;
-			border-radius: 4px; */
-			/* font-size: 16px; */
-
+			width: 150px;
+			height: 51px;
+			background-color: #6237ff;
+			border-radius: 4px;
 		}
 
-		.portfolio-link a {
-			display: table-cell;
-			padding-top: 15px;
-			padding-right: 30px;
-			padding-bottom: 15px;
-			padding-left: 30px;
+		.portfolio:hover {
+			background-color: #4e2acf;
+		}
+
+		.portfolio:hover .portfolio-link {
+			background-color: #4e2acf;
+			border-color: #4e2acf;
+		}
+
+		.portfolio-link {
+			border-top: 15px solid #6237ff;
+			border-bottom: 15px solid #6237ff;
+			border-right: 30px solid #6237ff;
+			border-left: 30px solid #6237ff;
 			color: #ffffff;
 			font-size: 16px;
 			letter-spacing: 0.3px;
 			text-decoration: none;
 			word-wrap: break-word;
+			box-sizing: border-box;
 			background-color: #6237ff;
 			border-radius: 4px;
 		}
@@ -179,6 +185,46 @@
 			padding-left: 7px;
 			padding-right: 7px;
 		}
+
+		/* Adaptive */
+
+		@media (max-width: 540px) {
+			.table-500 {
+				width: 340px !important;
+			}
+
+			.indent {
+				height: 50px !important;
+			}
+
+			.content {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+
+			.contacts-td {
+				display: block !important;
+				text-align: center !important;
+			}
+
+			.phone-td {
+				margin-bottom: 15px !important;
+			}
+		}
+
+		@media (max-width: 370px) {
+			.table-500 {
+				width: 280px !important;
+			}
+
+			.text {
+				padding-top: 10px !important;
+			}
+
+			.meeting {
+				padding-top: 35px !important;
+			}
+		}
 	</style>
 </head>
 
@@ -191,22 +237,23 @@
 				<table class="body table-500" cellpadding="0" cellspacing="0" width="500" align="center">
 					<!-- Top indent -->
 					<tr>
-						<td width="500" height="100"></td>
+						<td class="indent" width="500" height="100">
+						</td>
 					</tr>
 					<!-- / Top indent -->
 
 					<!-- Letter -->
 					<tr>
 						<td>
-							<table class="main" cellpadding="0" cellspacing="0" width="500" align="center">
+							<table class="main table-500" cellpadding="0" cellspacing="0" width="500" align="center">
 
 								<!-- Photo tr -->
 								<tr>
 									<td width="500" align="center">
-										<table class="photo" cellpadding="0" cellspacing="0" width="500" align="center">
+										<table class="table-500" cellpadding="0" cellspacing="0" width="500" align="center">
 											<tr>
 												<!-- Top left border -->
-												<td width="35%">
+												<td class="table-175" width="175">
 													<table cellpadding="0" cellspacing="0" width="100%">
 														<tr>
 															<td height="75"></td>
@@ -217,20 +264,21 @@
 													</table>
 												</td>
 												<!-- Photo -->
-												<td width="30%">
-													<table cellpadding="0" cellspacing="0" align="center">
+												<td>
+													<table cellpadding="0" cellspacing="0" align="center" width="150">
 														<tr>
-															<td class="photo-td" align="center" height="150">
-																<a href="https://elenaproject.github.io/resume/">
-																	<img src="https://elenaproject.github.io/resume/img/email/photo_circle_white.png"
-																		alt="photo Elena" />
+															<td class="photo-td" align="center" width="150" height="150">
+																<a href="https://elenafrontend.github.io/resume/">
+																	<img class="photo"
+																		src="https://elenafrontend.github.io/resume/img/email/photo_circle_white.png"
+																		alt="photo Elena" width="150px" height="150" style="display: block;" />
 																</a>
 															</td>
 														</tr>
 													</table>
 												</td>
 												<!-- Top right border -->
-												<td width="35%">
+												<td class="table-175" width="175">
 													<table cellpadding="0" cellspacing="0" width="100%">
 														<tr>
 															<td height="75"></td>
@@ -248,7 +296,7 @@
 
 								<!-- Content -->
 								<tr>
-									<td class="content" bgcolor="ffffff">
+									<td class="content" width="100%" bgcolor="ffffff">
 										<table cellpadding="0" cellspacing="0" align="center">
 											<tr>
 												<td class="name" align="center"
@@ -346,17 +394,17 @@
 													style="font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;">
 													Получить более подробную информацию, а также ознакомиться с моими проектами
 													Вы
-													можете, перейдя по <a href="#" title="Кнопка Портфолио">ссылке</a> ниже.
+													можете, перейдя по <a href="#" style="text-decoration: none;"
+														title="Кнопка Портфолио">ссылке</a> ниже.
 												</td>
 											</tr>
 											<tr>
 												<td>
 													<table cellpadding="0" cellspacing="0" align="center">
 														<tr>
-															<td class="portfolio" align="center" width="100%"
+															<td class="portfolio" align="center"
 																style="font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;">
-																<div class="portfolio-link"><a
-																		href="https://elenaproject.github.io/resume/">Портфолио</a></div>
+																<a class="portfolio-link" href="https://elenafrontend.github.io/resume/">Портфолио</a>
 															</td>
 														</tr>
 													</table>
@@ -384,13 +432,13 @@
 															<td class="phone" align="center">
 																<table cellpadding="0" cellspacing="0" align="center" width="90%">
 																	<tr>
-																		<td align="left">
+																		<td class="contacts-td phone-td" align="left">
 																			<table cellpadding="0" cellspacing="0">
 																				<tr>
 																					<td class="icon icon-phone">
 																						<a href="tel:+79270337365" style="text-decoration: none;">
-																							<img src="https://elenaproject.github.io/resume/img/email/phone.png"
-																								alt="phone">
+																							<img src="https://elenafrontend.github.io/resume/img/email/phone.png"
+																								alt="phone" height="17">
 																						</a>
 																					</td>
 																					<td class="icon-label">
@@ -403,12 +451,12 @@
 																			</table>
 																		</td>
 
-																		<td align="right">
+																		<td class="contacts-td" align="right">
 																			<table cellpadding="0" cellspacing="0">
 																				<tr>
 																					<td class="icon">
 																						<a href="mailto: gumerova.e.p@ya.ru">
-																							<img src="https://elenaproject.github.io/resume/img/email/email.png"
+																							<img src="https://elenafrontend.github.io/resume/img/email/email.png"
 																								alt="email">
 																						</a>
 																					</td>
@@ -439,19 +487,19 @@
 																	<tr>
 																		<td class="icon social__icon" align="center">
 																			<a href="https://github.com/ElenaProject">
-																				<img src="https://elenaproject.github.io/resume/img/email/github.png"
+																				<img src="https://elenafrontend.github.io/resume/img/email/github.png"
 																					alt="github">
 																			</a>
 																		</td>
 																		<td class="icon social__icon" align="center">
 																			<a href="https://www.linkedin.com/in/gumerovafrontend/">
-																				<img src="https://elenaproject.github.io/resume/img/email/linkedin.png"
+																				<img src="https://elenafrontend.github.io/resume/img/email/linkedin.png"
 																					alt="linkedin">
 																			</a>
 																		</td>
 																		<td class="icon social__icon" align="center">
 																			<a href="https://t.me/gumelena">
-																				<img src="https://elenaproject.github.io/resume/img/email/telegram.png"
+																				<img src="https://elenafrontend.github.io/resume/img/email/telegram.png"
 																					alt="telegram">
 																			</a>
 																		</td>
@@ -477,15 +525,16 @@
 
 					<!-- Letter shadow -->
 					<tr>
-						<td class="shadow" width="500" align="center">
-							<img src="https://elenaproject.github.io/resume/img/email/shadow_compress.png" alt="" width="500">
+						<td class="shadow table-500" width="500" align="center">
+							<img class="table-500" src="https://elenafrontend.github.io/resume/img/email/shadow_compress.png" alt=""
+								width="500">
 						</td>
 					</tr>
 					<!-- / Letter shadow -->
 
 					<!-- Bottom indent -->
 					<tr>
-						<td width="500" height="120"></td>
+						<td class="indent" width="500" height="120"></td>
 					</tr>
 					<!-- / Bottom indent -->
 				</table>
