@@ -1,4 +1,4 @@
-.nav__list, .certificates__list {
+.nav__list, .certificates__list, .skills__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@
 }
 
 .btn, .about__photo, .about__photo-wrapper::after {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 *,
@@ -275,7 +275,7 @@ body {
   height: 350px;
   top: -40px;
   right: -40px;
-  border: 10px solid #f8f2ff;
+  border: 7px solid #f8f2ff;
 }
 
 .about__photo img {
@@ -378,4 +378,49 @@ body {
 
 .certificates__description p {
   margin: 0;
+}
+
+.skills {
+  border-bottom: 2px solid #f8f2ff;
+}
+
+.skills__container {
+  padding: 70px 15px;
+}
+
+.skills__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.skills__item::before {
+  margin-bottom: 10px;
+  font-size: 56px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.skills__item:hover {
+  color: #6237ff;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }

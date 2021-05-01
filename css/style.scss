@@ -21,7 +21,7 @@
 }
 
 %bdrs {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 // === / PLACEHOLDERS ===
 
@@ -313,7 +313,7 @@ body {
         height: 350px;
         top: -40px;
         right: -40px;
-        border: 10px solid $color-grey;
+        border: 7px solid $color-grey;
       }
     }
 
@@ -403,17 +403,46 @@ body {
     }
   }
 }
-.container {
-}
-.title {
-}
-.subtitle {
-}
-
 // === / CERTIFICATES ===
+
 // === SKILLS ===
+.skills {
+  border-bottom: 2px solid $color-grey;
+
+  &__container {
+    padding: 70px 15px;
+    // border-bottom: 2px solid $color-grey;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    // color: $color-dark-grey;
+    text-align: center;
+    transition: $transition;
+
+    &::before {
+      margin-bottom: 10px;
+      font-size: $fs-xxl;
+      transition: transform $transition;
+    }
+
+    &:hover {
+      color: $color-primary;
+      transform: scale(1.5);
+    }
+  }
+}
 
 // === / SKILLS ===
+
 // === PORTFOLIO ===
 
 // === / PORTFOLIO ===
