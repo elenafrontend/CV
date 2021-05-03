@@ -11,3 +11,11 @@ var typed = new Typed(".typed", {
     self.cursor.remove();
   },
 });
+
+// 3D cards
+// https://micku7zu.github.io/vanilla-tilt.js/
+
+VanillaTilt.init(document.querySelectorAll(".portfolio__card"), {
+  max: 25,
+  speed: 300,
+});
