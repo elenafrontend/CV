@@ -75,7 +75,17 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 150px 15px;
+  padding: 150px 20px;
+
+  &--s {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &--m {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .visually-hidden {
@@ -197,7 +207,8 @@ body {
     display: flex;
     align-items: center;
     min-height: 65px;
-    padding: 0 15px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -292,7 +303,6 @@ body {
   &__container {
     display: flex;
     align-items: center;
-    max-width: 1140px;
   }
 
   &__photo {
@@ -412,11 +422,6 @@ body {
 .skills {
   border-bottom: 2px solid $color-grey;
 
-  &__container {
-    padding: 70px 15px;
-    // border-bottom: 2px solid $color-grey;
-  }
-
   &__list {
     @extend %list;
 
@@ -448,6 +453,7 @@ body {
 // === PORTFOLIO ===
 .portfolio {
   text-align: center;
+  // border-bottom: 2px solid $color-grey;
 
   &__title {
     &::after {
@@ -492,14 +498,13 @@ body {
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 97%;
-      height: 97%;
-      background-color: #272341c7;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #272341e8;
       opacity: 0;
-      transform: translate3d(-50%, -50%, 20px);
-      transition: 0.45s ease-in-out;
+      transition: $transition;
       transform-style: preserve-3d;
     }
 
@@ -547,7 +552,7 @@ body {
     &-about {
       position: relative;
       z-index: 1;
-      padding-top: 100px;
+      padding-top: 80px;
       transition: 0.45s ease-in-out;
       transform-style: preserve-3d;
     }
@@ -557,7 +562,7 @@ body {
       font-size: $fs-m;
       transform: translate3d(0, 0, 40px);
       transform-style: preserve-3d;
-      transition: 0.7s;
+      transition: 0.5s;
       opacity: 0;
     }
 
@@ -571,16 +576,133 @@ body {
     }
 
     &-link {
-      color: $color-white;
+      // color: $color-white;
+      font-weight: $fw-regular;
       opacity: 0;
       transform: translate3d(0, 120%, 40px);
       transform-style: preserve-3d;
-      transition: 0.7s;
+      transition: transform 0.5s;
     }
   }
 }
-
 // === / PORTFOLIO ===
-// === EXPERIENCE ===
 
+// === EXPERIENCE ===
+.experience {
+  background-color: $color-grey;
+
+  &__inner {
+    display: flex;
+    align-items: start;
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    min-width: 40%;
+  }
+
+  &__list {
+    @extend %list;
+
+    flex-grow: 1;
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 40px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -70px;
+      width: 3px;
+      height: 50%;
+      background-color: $color-primary;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      top: 50%;
+    }
+
+    &::after {
+      bottom: 50%;
+    }
+
+    &:first-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: block;
+    padding: 30px 30px;
+    color: $color-text;
+    text-decoration: none;
+    background-color: $color-white;
+    box-shadow: 1px 1px 9px 0 rgba(209, 206, 216, 0.5);
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: -70px;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      background-color: $color-grey;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+    }
+
+    &-date {
+      margin: 0;
+      margin-bottom: 20px;
+      color: $color-dark-grey;
+      font-size: $fs-xxs;
+    }
+
+    &-description {
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
 // === / EXPERIENCE ===
