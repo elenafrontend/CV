@@ -18,82 +18,16 @@
 </head>
 
 <body>
-	<!-- <div class="container">
-		<header>
-			<div>
-				<h1>Elena Gumerova</h1>
-				<p>Junior Front-end developer</p>
-				<p>33 years, ready for relocate and business trips</p>
-			</div>
-			<figure>
-				<img src="#" alt="Elena Gumerova foto">
-			</figure>
-		</header>
-		<main>
-			<section class="contacts">
-				<p>Kazan, russia</p>
-				<p><a href="tel:+79270337365">+79270337365</a></p>
-				<p><a href="mailto:gumerova.e.p@ya.ru">gumerova.e.p@ya.ru</a></p>
-			</section>
-		
-			<section class="languages">
-				<h2>Languages</h2>
-				<dl>
-					<dt>Russian</dt>
-					<dd>native</dd>
-					<dt>English</dt>
-					<dd>Pre-Intermidiate</dd>
-				</dl>
-			</section>
-			<section class="interests">
-				<h2>Interests</h2>
-				<ul>
-					<li>Reading non-fiction</li>
-					<li>Sport</li>
-					<li></li>
-				</ul>
-			</section>
-			
-			
-			</section>
-			<section class="education">
-				<h2>Education</h2>
-				<ul>
-					<li>
-						<h3>Coursera - Yandex</h3>
-						<p>Interface development: layout and JavaScript</p>
-						<p><time datetime="2020-05">05/2020</time> - <time datetime="2021-02">02/2021</time></p>
-					</li>
-					<li>
-						<h3>Academy of Public Administration</h3>
-						<p>BA in finance and credit</p>
-						<p><time datetime="2004">2004</time> - <time datetime="2009">2009</time></p>
-					</li>
-				</ul>
-			</section>
-			<section class="experience">
-				<h2>Previous experience</h2>
-				<ul>
-					<li>
-						<h3>Designer</h3>
-						<p><time datetime="2016">2016</time> - <time datetime="2019">2019</time></p>
-						<p> individual projects: polygrathy, interior, furniture
-							with experience in graphic design
-						</p>
-					</li>
-					<li>
-						<h3>Sales manager</h3>
-						<p><time datetime="2011">2011</time> - <time datetime="2015">2015</time></p>
-						<p> sales, record-keeping, marketing</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-	</div> -->
 
 	<header class="header">
 		<div class="container header__container">
 			<a class="logo" href="#">E</a>
+
+			<button class="burger">
+				<span class="visually-hidden">Open menu</span>
+				<span class="burger__line"></span>
+			</button>
+
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__item">
@@ -114,13 +48,17 @@
 					<li class="nav__item">
 						<a class="nav__link" href="#">Experience</a>
 					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#">Contacts</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<main>
-		<!-- greeting -->
+	<!-- <main>
+
+		greeting
 		<section class="greeting">
 			<div class="container greeting__container">
 				<h1 class="visually-hidden">Gumerova Elena, Front-end developer</h1>
@@ -132,15 +70,15 @@
 				<button class="btn btn--big btn--color">Know more</button>
 			</div>
 		</section>
-		<!-- / greeting -->
+		/ greeting
 
-		<!-- about -->
+		about
 		<section class="about">
 			<div class="container about__container">
 				<div class="about__photo-wrapper">
-					<div class="about__photo">
+					<figure class="about__photo">
 						<img src="img/photo.jpg" alt="Elena photo">
-					</div>
+					</figure>
 				</div>
 				<div class="about__content">
 					<h2 class="title">About Me</h2>
@@ -156,9 +94,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- / about -->
+		/ about
 
-		<!-- certificates -->
+		certificates
 		<section class="certificates">
 			<div class="container">
 				<h2 class="title certificates__title">Certificates</h2>
@@ -169,7 +107,7 @@
 						<div class="certificates__description">
 							<p>Pre-Intermediate level</p>
 						</div>
-						<!-- <time datetime="2014">2014</time> -->
+						<time datetime="2014">2014</time>
 					</li>
 					<li class="certificates__item icon-file-code">
 						<h3 class="certificates__name subtitle">Basics of programming</h3>
@@ -188,16 +126,16 @@
 							<p>Сorel Draw, Photoshop, InDesigh</p>
 							<p>3D Studio Max</p>
 						</div>
-						<!-- <p><time datetime="2018-11">11/2018</time> - <time datetime="2019-01">01/2019</time><br>
+						<p><time datetime="2018-11">11/2018</time> - <time datetime="2019-01">01/2019</time><br>
 							<time datetime="2017-11">11/2017</time> - <time datetime="2017-12">12/2017</time>
-						</p> -->
+						</p>
 					</li>
 				</ul>
 			</div>
 		</section>
-		<!-- / certificates -->
+		/ certificates
 
-		<!-- skills -->
+		skills
 		<section class="skills">
 			<div class="container container--s">
 				<h2 class="visually-hidden">Skills</h2>
@@ -212,9 +150,9 @@
 				</ul>
 			</div>
 		</section>
-		<!-- / skills -->
+		/ skills
 
-		<!-- portfolio -->
+		portfolio
 		<section class="portfolio">
 			<div class="container container--m">
 				<h2 class="title portfolio__title">My Recent Work</h2>
@@ -296,9 +234,9 @@
 				</ul>
 			</div>
 		</section>
-		<!-- / portfolio -->
+		/ portfolio
 
-		<!-- experience -->
+		experience
 		<section class="experience">
 			<div class="container container--m">
 				<div class="experience__inner">
@@ -338,6 +276,7 @@
 											datetime="2020-06">06/2020</time>
 									</p>
 									<p class="experience__card-description">Courses: Basics of html and css, Subtleties of layout</p>
+									<p>Interface development: layout and JavaScript</p>
 								</div>
 							</a>
 						</li>
@@ -382,50 +321,49 @@
 				</div>
 			</div>
 		</section>
-		<!-- / experience -->
+		/ experience
+	</main> -->
 
-		<!-- contacts -->
-		<section class="contacts">
-			<div class="container container--s contacts__container">
-				<a class="logo contacts__logo" href="#">E</a>
-				<p class="contacts__slogan">Living, learning, & leveling up one day at a time.</p>
-				<ul class="contacts__list">
-					<li>
-						<a class="contacts__link icon-email" href="mailto:elenafrontend@ya.ru" target="_blank"
-							title="elenafrontend@ya.ru">
-							<span class="visually-hidden">email</span>
-						</a>
-					</li>
-					<li>
-						<a class="contacts__link icon-phone" href="tel:+79270337365" target="_blank" title="+7 9270 33 73 65">
-							<span class="visually-hidden">phone</span>
-						</a>
-					</li>
-					<li>
-						<a class="contacts__link icon-telegram" href="https://t.me/gumelena" target="_blank" title="gumelena">
-							<span class="visually-hidden">telegram</span>
-						</a>
-					</li>
-					<li>
-						<a class="contacts__link icon-linkedin" href="https://www.linkedin.com/in/elenafrontend/" target="_blank"
-							title="elenafrontend">
-							<span class="visually-hidden">linkedin</span>
-						</a>
-					</li>
-					<li>
-						<a class="contacts__link icon-github" href="https://github.com/elenafrontend" target="_blank"
-							title="elenafrontend">
-							<span class="visually-hidden">github</span>
-						</a>
-					</li>
-				</ul>
-				<div class="copyright">Handcrafted by me <span></span> <a href="">elenafrontend</a></div>
-			</div>
-		</section>
-		<!-- / contacts -->
-	</main>
+	<!-- contacts -->
+	<!-- <footer class="contacts">
+		<div class="container container--s contacts__container">
+			<a class="logo contacts__logo" href="#">E</a>
+			<p class="contacts__slogan">Living, learning, & leveling up one day at a time.</p>
+			<ul class="contacts__list">
+				<li>
+					<a class="contacts__link icon-email" href="mailto:elenafrontend@ya.ru" target="_blank"
+						title="elenafrontend@ya.ru">
+						<span class="visually-hidden">email</span>
+					</a>
+				</li>
+				<li>
+					<a class="contacts__link icon-phone" href="tel:+79270337365" target="_blank" title="+7 9270 33 73 65">
+						<span class="visually-hidden">phone</span>
+					</a>
+				</li>
+				<li>
+					<a class="contacts__link icon-telegram" href="https://t.me/gumelena" target="_blank" title="gumelena">
+						<span class="visually-hidden">telegram</span>
+					</a>
+				</li>
+				<li>
+					<a class="contacts__link icon-linkedin" href="https://www.linkedin.com/in/elenafrontend/" target="_blank"
+						title="elenafrontend">
+						<span class="visually-hidden">linkedin</span>
+					</a>
+				</li>
+				<li>
+					<a class="contacts__link icon-github" href="https://github.com/elenafrontend" target="_blank"
+						title="elenafrontend">
+						<span class="visually-hidden">github</span>
+					</a>
+				</li>
+			</ul>
+			<div class="copyright">Handcrafted by me <span></span> <a href="">elenafrontend</a></div>
+		</div>
+	</footer> -->
+	<!-- / contacts -->
 
-	<footer></footer>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
