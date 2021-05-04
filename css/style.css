@@ -1,4 +1,4 @@
-.nav__list, .certificates__list, .skills__list, .portfolio__list, .experience__list {
+.nav__list, .certificates__list, .skills__list, .portfolio__list, .experience__list, .contacts__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ body {
 }
 
 .text-color {
-  color: #6237ff;
+  color: #7510f7;
   /* background-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -85,7 +85,7 @@ body {
   bottom: 0;
   width: 70px;
   height: 4px;
-  background-color: #6237ff;
+  background-color: #7510f7;
 }
 
 .subtitle {
@@ -100,10 +100,10 @@ body {
 .btn {
   position: relative;
   padding: 8px 16px;
-  color: #6237ff;
+  color: #7510f7;
   font-size: 16px;
   line-height: 1;
-  border: 2px solid #6237ff;
+  border: 2px solid #7510f7;
   font-weight: 700;
   /* &--color {
     background-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
@@ -136,7 +136,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #6237ff;
+  background-color: #7510f7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -188,7 +188,7 @@ body {
   position: absolute;
   bottom: -2px;
   left: 100%;
-  color: #6237ff;
+  color: #7510f7;
 }
 
 .nav {
@@ -225,7 +225,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #6237ff;
+  background-color: #7510f7;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -357,7 +357,7 @@ body {
 
 .certificates__item:hover {
   color: #ffffff;
-  background-color: #6237ff;
+  background-color: #7510f7;
 }
 
 .certificates__item:hover p {
@@ -430,7 +430,7 @@ body {
 }
 
 .skills__item:hover {
-  color: #6237ff;
+  color: #7510f7;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
@@ -560,7 +560,7 @@ body {
 }
 
 .portfolio__card-title {
-  color: #6237ff;
+  color: #7510f7;
   font-size: 24px;
   -webkit-transform: translate3d(0, 0, 40px);
           transform: translate3d(0, 0, 40px);
@@ -635,7 +635,7 @@ body {
   left: -70px;
   width: 3px;
   height: 50%;
-  background-color: #6237ff;
+  background-color: #7510f7;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -675,7 +675,7 @@ body {
 
 .experience__card:hover, .experience__card:focus {
   color: #ffffff;
-  background-color: #6237ff;
+  background-color: #7510f7;
 }
 
 .experience__card::before, .experience__card::after {
@@ -697,7 +697,7 @@ body {
 .experience__card::after {
   width: 20px;
   height: 20px;
-  border: 2px solid #6237ff;
+  border: 2px solid #7510f7;
   border-radius: 50%;
 }
 
@@ -715,4 +715,93 @@ body {
 .experience__card-description {
   margin: 0;
   line-height: 1.5;
+}
+
+.contacts {
+  color: #ffffff;
+  text-align: center;
+  background-color: #7510f7;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__logo {
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.contacts__logo::before {
+  color: #ffffff;
+}
+
+.contacts__slogan {
+  max-width: 350px;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 24px;
+  line-height: 1.2;
+  opacity: 0.7;
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 350px;
+}
+
+.contacts__link {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.contacts__link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contacts__link:hover {
+  background-color: #ffffff;
+}
+
+.contacts__link:hover::before {
+  color: #7510f7;
+}
+
+.copyright {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.copyright a {
+  margin-left: 5px;
+  color: #272341;
+  text-decoration: none;
 }
