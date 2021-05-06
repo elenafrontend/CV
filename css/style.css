@@ -248,6 +248,14 @@ body {
   height: 37px;
 }
 
+@media (max-width: 991px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .burger::before, .burger::after {
   content: "";
   position: absolute;
@@ -296,23 +304,15 @@ body {
           transform: scale(0);
 }
 
-@media (max-width: 991px) {
-  .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .nav {
   position: relative;
   z-index: 1;
   min-width: 60%;
   margin-left: auto;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 .nav::-webkit-scrollbar {
