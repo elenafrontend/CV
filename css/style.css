@@ -187,8 +187,10 @@ body {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   visibility: hidden;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, transform 0.7s, visibility 0.7s;
+  transition: opacity 0.7s, transform 0.7s, visibility 0.7s, -webkit-transform 0.7s;
 }
 
 .header--active {

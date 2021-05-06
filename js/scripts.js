@@ -61,11 +61,21 @@ burgerBtn.addEventListener("click", function () {
   header.classList.toggle("header--active-nav");
   burgerBtn.classList.toggle("burger--active");
 
+  // ширина скролла
+  let body = document.body;
+  let paddingOffset = window.innerWidth - body.offsetWidth + "px";
+
   // блокируем/возобновляем скролл страницы
   if (burgerBtn.classList.contains("burger--active")) {
     document.body.style.overflow = "hidden";
+    // убираем скачок страницы - компенсируем скролл
+    body.style.paddingRight = paddingOffset;
+    header.style.paddingRight = paddingOffset;
   } else {
     document.body.style.overflow = "";
+    // убираем компенсацию скролла
+    body.style.paddingRight = "0px";
+    header.style.paddingRight = "0px";
   }
 });
 
