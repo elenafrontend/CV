@@ -3,6 +3,7 @@
 let header = document.querySelector(".header");
 let burgerBtn = document.querySelector(".burger");
 let navLinks = document.querySelectorAll(".nav__link");
+let anchors = document.querySelectorAll('[href^="#"]');
 
 // -----------  header appearance  -----------
 window.onscroll = function () {
@@ -37,6 +38,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//-----------  scroll to section  -----------
+
+// для каждой ссылки-якоря добавляем обработчик
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (evt) {
+    // убираем переход по ссылке
+    evt.preventDefault();
+
+    // прокручиваем к секции по id
+    let sectionID = anchor.getAttribute("href");
+    document.querySelector(sectionID).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
+
 //-----------  burger-menu  -----------
 
 burgerBtn.addEventListener("click", function () {
@@ -62,7 +80,10 @@ let resetNav = function () {
 
 // закрываем бургер при клике на ссылку в меню
 for (let navLink of navLinks) {
-  navLink.addEventListener("click", function () {
+  navLink.addEventListener("click", function (evt) {
+    // убираем переход по ссылке
+    evt.preventDefault();
+
     // если открыто меню-бургер, закрываем его
     resetNav();
   });
