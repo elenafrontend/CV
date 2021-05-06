@@ -4,6 +4,15 @@ let header = document.querySelector(".header");
 let burgerBtn = document.querySelector(".burger");
 let navLinks = document.querySelectorAll(".nav__link");
 
+// -----------  header appearance  -----------
+window.onscroll = function () {
+  if (window.pageYOffset > 100) {
+    header.classList.add("header--active");
+  } else {
+    header.classList.remove("header--active");
+  }
+};
+
 //-----------  burger-menu  -----------
 
 burgerBtn.addEventListener("click", function () {

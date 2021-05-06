@@ -48,7 +48,7 @@ $fw-bold: 700;
 $color-primary: #7510f7;
 // #6237ff;
 // #7446af
-$color-text: #48484b;
+$color-text: #272341;
 $color-white: #ffffff;
 $color-grey: #f8f2ff;
 $color-dark-grey: #c2c2c2;
@@ -256,9 +256,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  // opacity: 0;
-  // transform: translateY(-100%);
-  // visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: 0.7s;
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
 
   &--active-nav {
     .nav {
