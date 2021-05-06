@@ -13,6 +13,30 @@ window.onscroll = function () {
   }
 };
 
+// -----------  active scroll menu item  -----------
+
+window.addEventListener("scroll", () => {
+  let scrollDistance = window.scrollY;
+
+  if (window.innerWidth > 991) {
+    let sections = document.querySelectorAll(".section");
+
+    for (let i = 0; i < sections.length; i++) {
+      let sectionPosition = sections[i].offsetTop;
+
+      if (sectionPosition - header.clientHeight < scrollDistance) {
+        for (let navLink of navLinks) {
+          navLink.classList.remove("nav__link--active");
+        }
+
+        let navItems = document.querySelectorAll(".nav__item");
+
+        navItems[i].querySelector("a").classList.add("nav__link--active");
+      }
+    }
+  }
+});
+
 //-----------  burger-menu  -----------
 
 burgerBtn.addEventListener("click", function () {
