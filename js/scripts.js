@@ -84,28 +84,41 @@ for (let anchor of anchors) {
   });
 }
 
+//-----------  scroll toggle  -----------
+
+function scrollToggle(elem, classActive) {
+  // ширина скролла
+  let body = document.body;
+  let paddingOffset = window.innerWidth - body.offsetWidth + "px";
+
+  // функция блокировки скролла
+  if (elem.classList.contains(classActive)) {
+    document.body.style.overflow = "hidden";
+
+    // если десктоп - убираем скачок страницы - компенсируем скролл
+    if (!isMobile.any()) {
+      body.style.paddingRight = paddingOffset;
+      header.style.paddingRight = paddingOffset;
+    }
+  } else {
+    document.body.style.overflow = "";
+
+    // если десктоп - убираем компенсацию скролла
+    if (!isMobile.any()) {
+      body.style.paddingRight = "0px";
+      header.style.paddingRight = "0px";
+    }
+  }
+}
+
 //-----------  burger-menu  -----------
 
 burgerBtn.addEventListener("click", function () {
   header.classList.toggle("header--active-nav");
   burgerBtn.classList.toggle("burger--active");
 
-  // ширина скролла
-  let body = document.body;
-  let paddingOffset = window.innerWidth - body.offsetWidth + "px";
-
   // блокируем/возобновляем скролл страницы
-  if (burgerBtn.classList.contains("burger--active")) {
-    document.body.style.overflow = "hidden";
-    // убираем скачок страницы - компенсируем скролл
-    body.style.paddingRight = paddingOffset;
-    header.style.paddingRight = paddingOffset;
-  } else {
-    document.body.style.overflow = "";
-    // убираем компенсацию скролла
-    body.style.paddingRight = "0px";
-    header.style.paddingRight = "0px";
-  }
+  scrollToggle(burgerBtn, "burger--active");
 });
 
 // функция закрытия меню бургер
