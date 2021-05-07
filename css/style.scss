@@ -128,8 +128,7 @@ body {
 
   @include breakpoint-max(lg) {
     max-width: 700px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 120px 0;
   }
 
   @include breakpoint-max(md) {
@@ -662,7 +661,8 @@ body {
     @extend %list;
 
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   &__item {
@@ -676,6 +676,23 @@ body {
     text-align: center;
     background-color: $color-white;
     transition: $transition;
+
+    @include breakpoint-max(lg) {
+      flex-basis: 45%;
+      margin-bottom: 35px;
+    }
+
+    @include breakpoint-max(md) {
+      flex-basis: 70%;
+    }
+
+    @include breakpoint-max(sm) {
+      flex-basis: 80%;
+    }
+
+    @include breakpoint-max(xs) {
+      flex-basis: 100%;
+    }
 
     &::before {
       margin-bottom: 30px;
