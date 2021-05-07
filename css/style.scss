@@ -114,7 +114,7 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 150px 20px;
+  padding: 150px 25px;
 
   &--s {
     padding-top: 70px;
@@ -138,6 +138,10 @@ body {
 
   @include breakpoint-max(sm) {
     max-width: 600px;
+    padding: 100px 25px;
+  }
+
+  @include breakpoint-max(xs) {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -529,43 +533,103 @@ body {
 // === / GREETING ===
 
 // === ABOUT ===
-// #d3d3d4
 .about {
   &__container {
     display: flex;
-    align-items: center;
+    align-items: start;
+
+    @include breakpoint-max(md) {
+      flex-wrap: wrap;
+      pointer-events: none;
+    }
   }
 
   &__photo {
-    @extend %bdrs;
+    position: relative;
+    margin-right: 150px;
+    transition: 0.7s;
 
-    min-width: 350px;
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
+    &:hover {
+      margin-left: 40px;
+      margin-right: 110px;
 
-    &-wrapper {
-      position: relative;
-      margin-right: 150px;
+      @include breakpoint-max(lg) {
+        margin-left: 30px;
+        margin-right: 70px;
+      }
 
       &::after {
-        @extend %bdrs;
+        top: 10%;
+        right: 10%;
+      }
 
-        content: "";
-        position: absolute;
-        z-index: -1;
-        width: 350px;
-        height: 350px;
-        top: -40px;
-        right: -40px;
-        border: 7px solid $color-grey;
+      & img {
+        transform: scale(1.1);
       }
     }
 
-    & img {
+    @include breakpoint-max(lg) {
+      margin-right: 100px;
+    }
+
+    @include breakpoint-max(md) {
+      width: 100%;
+      margin: 0 auto 50px;
+      padding: 30px;
+    }
+
+    @include breakpoint-max(sm) {
+      padding: 0;
+    }
+
+    &::after {
+      @extend %bdrs;
+
+      content: "";
+      position: absolute;
+      z-index: -1;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      top: -10%;
+      right: -10%;
+      border: 7px solid $color-grey;
+      transition: 0.5s;
+
+      @include breakpoint-max(md) {
+        display: none;
+      }
+    }
+
+    &-wrapper {
+      @extend %bdrs;
+
+      // min-width: 350px;
+      width: 350px;
+      height: 350px;
+      margin: 0;
+      overflow: hidden;
+      transition: 1.5s;
+
+      @include breakpoint-max(lg) {
+        width: 250px;
+        height: 250px;
+      }
+
+      @include breakpoint-max(md) {
+        width: 100%;
+        height: 350px;
+      }
+
+      @include breakpoint-max(xs) {
+        height: 300px;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.7s;
+      }
     }
   }
 
@@ -576,6 +640,12 @@ body {
   &__text {
     margin: 0;
     margin-bottom: 30px;
+
+    @include breakpoint-max(sm) {
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
+    }
   }
 }
 // === / ABOUT ===
