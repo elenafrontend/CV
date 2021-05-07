@@ -204,6 +204,10 @@ body {
 
   &--big {
     font-size: $fs-m;
+
+    @include breakpoint-max(md) {
+      font-size: $fs-s;
+    }
   }
 
   &::after {
@@ -483,6 +487,19 @@ body {
 
   &__container {
     width: 100%;
+
+    @include breakpoint-max(xl) {
+      padding-left: 50px;
+    }
+
+    @include breakpoint-max(lg) {
+      padding-left: 0;
+    }
+
+    @include breakpoint-max(sm) {
+      max-width: 400px;
+      padding-left: 20px;
+    }
   }
 
   &__text {
@@ -491,7 +508,22 @@ body {
     font-size: $fs-xxl;
     font-weight: $fw-bold;
     line-height: 1.2;
-    //  font-size: 40px;
+
+    @include breakpoint-max(xl) {
+      font-size: 45px;
+    }
+
+    @include breakpoint-max(lg) {
+      font-size: 40px;
+    }
+
+    @include breakpoint-max(md) {
+      font-size: 30px;
+    }
+
+    @include breakpoint-max(sm) {
+      line-height: 1.5;
+    }
   }
 }
 // === / GREETING ===
