@@ -5,6 +5,35 @@ let burgerBtn = document.querySelector(".burger");
 let navLinks = document.querySelectorAll(".nav__link");
 let anchors = document.querySelectorAll('[href^="#"]');
 
+// -----------  mobile or not  -----------
+
+const isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
+};
+
 // -----------  header appearance  -----------
 window.onscroll = function () {
   if (window.pageYOffset > 100) {
