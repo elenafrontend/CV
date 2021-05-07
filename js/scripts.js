@@ -136,6 +136,11 @@ for (let navLink of navLinks) {
     // убираем переход по ссылке
     evt.preventDefault();
 
+    // снимаем выделение ссылки
+    for (let navLink of navLinks) {
+      navLink.classList.remove("nav__link--active");
+    }
+
     // если открыто меню-бургер, закрываем его
     resetNav();
   });
