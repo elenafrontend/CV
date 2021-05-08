@@ -128,7 +128,7 @@ body {
 
   @include breakpoint-max(lg) {
     max-width: 700px;
-    padding: 120px 0;
+    padding: 100px 0;
   }
 
   @include breakpoint-max(md) {
@@ -137,7 +137,7 @@ body {
 
   @include breakpoint-max(sm) {
     max-width: 600px;
-    padding: 100px 25px;
+    padding: 80px 25px;
   }
 
   @include breakpoint-max(xs) {
@@ -539,7 +539,6 @@ body {
 
     @include breakpoint-max(md) {
       flex-wrap: wrap;
-      pointer-events: none;
     }
   }
 
@@ -575,6 +574,7 @@ body {
       width: 100%;
       margin: 0 auto 50px;
       padding: 30px;
+      pointer-events: none;
     }
 
     @include breakpoint-max(sm) {
@@ -739,19 +739,23 @@ body {
 
 // === SKILLS ===
 .skills {
+  padding-top: 70px;
+  padding-bottom: 70px;
   border-bottom: 2px solid $color-grey;
+  overflow: hidden;
 
   &__list {
     @extend %list;
 
     display: flex;
     justify-content: space-between;
+    width: 100vw;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    // color: $color-dark-grey;
+    // width: 50px;
     text-align: center;
     transition: $transition;
 
@@ -767,6 +771,12 @@ body {
     }
   }
 }
+
+// swiper
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
 // === / SKILLS ===
 
 // === PORTFOLIO ===
