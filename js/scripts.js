@@ -4,6 +4,8 @@ let header = document.querySelector(".header");
 let burgerBtn = document.querySelector(".burger");
 let navLinks = document.querySelectorAll(".nav__link");
 let anchors = document.querySelectorAll('[href^="#"]');
+let skillsItems = document.querySelectorAll(".skills__item");
+let skills = document.querySelector(".skills");
 
 // -----------  mobile or not  -----------
 
@@ -161,6 +163,75 @@ var typed = new Typed(".typed", {
   onComplete: (self) => {
     self.cursor.remove();
   },
+});
+
+// -----------  sliders  -----------
+
+// Инициализируем swiper
+let swiper = new Swiper(".skills", {
+  loop: true,
+  speed: 3000,
+  slidesPerView: 2.5,
+
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    // when window width is >= 400px
+    400: {
+      slidesPerView: 3.5,
+    },
+
+    576: {
+      slidesPerView: 4,
+    },
+
+    768: {
+      slidesPerView: 5,
+    },
+
+    992: {
+      slidesPerView: 6,
+      speed: 5000,
+    },
+
+    1400: {
+      slidesPerView: 7,
+    },
+
+    1700: {
+      slidesPerView: 8,
+      speed: 6000,
+    },
+  },
+
+  grabCursor: true,
+  keyboard: true,
+
+  // Стоп при наведении
+  /* on: {
+    init() {
+      this.el.addEventListener("mouseover", () => {
+        this.autoplay.stop();
+      });
+
+      this.el.addEventListener("mouseout", () => {
+        this.autoplay.start();
+      });
+    },
+  }, */
+});
+
+// Стоп при наведении
+
+skills.addEventListener("mouseover", () => {
+  swiper.autoplay.stop();
+});
+
+skills.addEventListener("mouseout", () => {
+  swiper.autoplay.start();
 });
 
 //-----------  3D cards  -----------
