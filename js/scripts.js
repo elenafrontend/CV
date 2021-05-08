@@ -50,22 +50,22 @@ window.onscroll = function () {
 window.addEventListener("scroll", () => {
   let scrollDistance = window.scrollY;
 
-  if (window.innerWidth > 991) {
-    let sections = document.querySelectorAll(".section");
+  // if (window.innerWidth > 991) {
+  let sections = document.querySelectorAll(".section");
 
-    for (let i = 0; i < sections.length; i++) {
-      let sectionPosition = sections[i].offsetTop;
+  for (let i = 0; i < sections.length; i++) {
+    let sectionPosition = sections[i].offsetTop;
 
-      if (sectionPosition - header.clientHeight < scrollDistance) {
-        for (let navLink of navLinks) {
-          navLink.classList.remove("nav__link--active");
-        }
-
-        let navItems = document.querySelectorAll(".nav__item");
-
-        navItems[i].querySelector("a").classList.add("nav__link--active");
+    if (sectionPosition - header.clientHeight < scrollDistance) {
+      for (let navLink of navLinks) {
+        navLink.classList.remove("nav__link--active");
       }
+
+      let navItems = document.querySelectorAll(".nav__item");
+
+      navItems[i].querySelector("a").classList.add("nav__link--active");
     }
+    // }
   }
 });
 
@@ -119,6 +119,10 @@ burgerBtn.addEventListener("click", function () {
   header.classList.toggle("header--active-nav");
   burgerBtn.classList.toggle("burger--active");
 
+  /* for (let navLink of navLinks) {
+    navLink.classList.remove("nav__link--active");
+  } */
+
   // блокируем/возобновляем скролл страницы
   scrollToggle(burgerBtn, "burger--active");
 });
@@ -128,7 +132,6 @@ let resetNav = function () {
   if (burgerBtn.classList.contains("burger--active")) {
     burgerBtn.classList.remove("burger--active");
     header.classList.remove("header--active-nav");
-    document.body.style.overflow = "";
   }
 };
 
@@ -139,9 +142,9 @@ for (let navLink of navLinks) {
     evt.preventDefault();
 
     // снимаем выделение ссылки
-    for (let navLink of navLinks) {
+    /* for (let navLink of navLinks) {
       navLink.classList.remove("nav__link--active");
-    }
+    } */
 
     // если открыто меню-бургер, закрываем его
     resetNav();
