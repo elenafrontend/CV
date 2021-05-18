@@ -240,8 +240,10 @@ skills.addEventListener("mouseout", () => {
 //-----------  3D cards  -----------
 // https://micku7zu.github.io/vanilla-tilt.js/
 
+if (!isMobile.any()) {
 VanillaTilt.init(document.querySelectorAll(".portfolio__card"), {
   max: 20,
   speed: 600,
-  reverse: true,
+    // reverse: true,
 });
+}

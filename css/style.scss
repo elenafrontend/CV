@@ -187,6 +187,7 @@ body {
 .subtitle {
   margin: 0;
   font-size: $fs-s;
+  line-height: 1.5;
 }
 
 .text {
@@ -204,6 +205,7 @@ body {
   line-height: 1;
   border: 2px solid $color-primary;
   font-weight: $fw-bold;
+  transition: 0.2s;
 
   &--big {
     font-size: $fs-m;
@@ -776,13 +778,11 @@ body {
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-
 // === / SKILLS ===
 
 // === PORTFOLIO ===
 .portfolio {
   text-align: center;
-  // border-bottom: 2px solid $color-grey;
 
   &__title {
     &::after {
@@ -794,7 +794,7 @@ body {
 
   &__subtitle {
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
 
   &__list {
@@ -803,11 +803,41 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include breakpoint-max(xl) {
+      justify-content: center;
+    }
   }
 
   &__item {
     flex-basis: 30%;
-    margin-bottom: 30px;
+    margin-top: 50px;
+
+    @include breakpoint-max(xl) {
+      flex-basis: 32%;
+      margin-right: 50px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint-max(lg) {
+      flex-basis: 46%;
+    }
+
+    @include breakpoint-max(md) {
+      flex-basis: 70%;
+      margin-right: 0;
+    }
+
+    @include breakpoint-max(sm) {
+      flex-basis: 80%;
+    }
+
+    @include breakpoint-max(xs) {
+      flex-basis: 100%;
+    }
   }
 
   &__card {
@@ -817,10 +847,10 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    height: 100%;
     margin: 0;
-    min-height: 310px;
-    min-width: 310px;
     color: $color-white;
+    font-weight: $fw-regular;
     border: 1px solid $color-grey;
     transform-style: preserve-3d;
 
@@ -831,15 +861,14 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #272341e8;
+      background-color: $color-text;
       opacity: 0;
       transition: $transition;
-      transform-style: preserve-3d;
     }
 
     &:hover {
       &::after {
-        opacity: 1;
+        opacity: 0.9;
       }
 
       #{$parent}-img img {
@@ -848,20 +877,12 @@ body {
 
       #{$parent}-about {
         opacity: 1;
-      }
-
-      #{$parent}-title {
-        opacity: 1;
-      }
-
-      #{$parent}-description {
-        transform: translate3d(0, 0, 35px);
-        opacity: 1;
-      }
-
-      #{$parent}-link {
         transform: translate3d(0, 0, 40px);
-        opacity: 1;
+      }
+
+      #{$parent}-description,
+      #{$parent}-link {
+        transform: translate(0, 0);
       }
     }
 
@@ -879,38 +900,69 @@ body {
       }
     }
     &-about {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       position: relative;
       z-index: 1;
-      padding-top: 80px;
-      transition: 0.45s ease-in-out;
+      // min-height: 300px;
+      padding: 25% 10%;
       transform-style: preserve-3d;
+      overflow: hidden;
+      opacity: 0;
+
+      @include breakpoint-max(sm) {
+        padding: 20% 5%;
+      }
     }
 
     &-title {
-      color: $color-primary;
       font-size: $fs-m;
-      transform: translate3d(0, 0, 40px);
-      transform-style: preserve-3d;
-      transition: 0.5s;
-      opacity: 0;
+      font-weight: 400;
+
+      @include breakpoint-max(xs) {
+        font-size: $fs-s;
+      }
     }
 
     &-description {
-      margin-top: 25px;
-      margin-bottom: 50px;
-      transform: translate3d(0, -120%, 35px);
-      transform-style: preserve-3d;
+      flex-grow: 1;
+      margin-top: 20px;
+      margin-bottom: 25px;
+      transform: translate(0, -120%);
       transition: 0.7s;
-      opacity: 0;
+      line-height: 1.5;
+
+      @include breakpoint-max(xs) {
+        font-size: $fs-xxs;
+      }
     }
 
     &-link {
-      // color: $color-white;
+      display: inline-block;
+      color: $color-text;
+      font-size: $fs-xs;
       font-weight: $fw-regular;
-      opacity: 0;
-      transform: translate3d(0, 120%, 40px);
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
+      letter-spacing: 0.8px;
+      transition: 0.5s;
+      transform: translate(0, 50%);
+
+      @include breakpoint-max(xs) {
+        font-size: $fs-xxs;
+      }
+
+      &::after {
+        width: 100%;
+      }
+
+      &:hover {
+        &::after {
+          width: 0;
+        }
+      }
     }
   }
 }
