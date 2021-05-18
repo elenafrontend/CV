@@ -119,10 +119,6 @@ burgerBtn.addEventListener("click", function () {
   header.classList.toggle("header--active-nav");
   burgerBtn.classList.toggle("burger--active");
 
-  /* for (let navLink of navLinks) {
-    navLink.classList.remove("nav__link--active");
-  } */
-
   // блокируем/возобновляем скролл страницы
   scrollToggle(burgerBtn, "burger--active");
 });
@@ -132,6 +128,8 @@ let resetNav = function () {
   if (burgerBtn.classList.contains("burger--active")) {
     burgerBtn.classList.remove("burger--active");
     header.classList.remove("header--active-nav");
+
+    scrollToggle(burgerBtn, "burger--active");
   }
 };
 
@@ -241,9 +239,9 @@ skills.addEventListener("mouseout", () => {
 // https://micku7zu.github.io/vanilla-tilt.js/
 
 if (!isMobile.any()) {
-VanillaTilt.init(document.querySelectorAll(".portfolio__card"), {
-  max: 20,
-  speed: 600,
+  VanillaTilt.init(document.querySelectorAll(".portfolio__card"), {
+    max: 20,
+    speed: 600,
     // reverse: true,
-});
+  });
 }
