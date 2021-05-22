@@ -694,6 +694,7 @@ body {
 
     @include breakpoint-max(xs) {
       flex-basis: 100%;
+      padding: 30px 15px;
     }
 
     &::before {

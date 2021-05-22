@@ -716,6 +716,7 @@ body {
   .certificates__item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    padding: 30px 15px;
   }
 }
 
