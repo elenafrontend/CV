@@ -977,6 +977,10 @@ body {
     align-items: start;
     margin-bottom: 100px;
 
+    @include breakpoint-max(md) {
+      flex-direction: column;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -990,6 +994,19 @@ body {
     @extend %list;
 
     flex-grow: 1;
+
+    @include breakpoint-max(lg) {
+      margin-top: 80px;
+    }
+
+    @include breakpoint-max(md) {
+      margin-top: 20px;
+      margin-left: 90px;
+    }
+
+    @include breakpoint-max(xs) {
+      margin-left: 50px;
+    }
   }
 
   &__item {
@@ -1005,6 +1022,10 @@ body {
       height: 50%;
       background-color: $color-primary;
       transform: translateX(-50%);
+
+      @include breakpoint-max(xs) {
+        left: -30px;
+      }
     }
 
     &::before {
@@ -1055,6 +1076,10 @@ body {
       top: 50%;
       left: -70px;
       transform: translate(-50%, -50%);
+
+      @include breakpoint-max(xs) {
+        left: -30px;
+      }
     }
 
     &::before {
