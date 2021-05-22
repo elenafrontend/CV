@@ -105,9 +105,10 @@ $breakpoints: (
 body {
   @include montserrat;
 
+  color: $color-text;
   font-size: $fs-xs;
   font-weight: $fw-regular;
-  color: $color-text;
+  line-height: 1.5;
   background-color: $color-white;
 }
 
@@ -187,7 +188,6 @@ body {
 .subtitle {
   margin: 0;
   font-size: $fs-s;
-  line-height: 1.5;
 }
 
 .text {
@@ -731,7 +731,6 @@ body {
     flex: 1 1 auto;
     color: $color-dark-grey;
     font-size: $fs-xxs;
-    line-height: 1.5;
 
     p {
       margin: 0;
@@ -935,7 +934,6 @@ body {
       margin-bottom: 25px;
       transform: translate(0, -120%);
       transition: 0.7s;
-      line-height: 1.5;
 
       @include breakpoint-max(xs) {
         font-size: $fs-xxs;
@@ -1109,7 +1107,6 @@ body {
 
     &-description {
       margin: 0;
-      line-height: 1.5;
     }
   }
 }
@@ -1141,7 +1138,7 @@ body {
     margin: 0;
     margin-bottom: 60px;
     font-size: $fs-m;
-    line-height: 1.2;
+    line-height: 1.4;
     opacity: 0.7;
   }
 
@@ -1153,6 +1150,10 @@ body {
     margin: 0 auto;
     margin-bottom: 60px;
     width: 350px;
+
+    @include breakpoint-max(xs) {
+      width: 100%;
+    }
   }
 
   &__link {
@@ -1163,9 +1164,14 @@ body {
     color: $color-white;
     font-size: $fs-s;
     text-decoration: none;
-    vertical-align: middle;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
+    transition: 0.5s;
+
+    @include breakpoint-max(xs) {
+      width: 40px;
+      height: 40px;
+    }
 
     &::before {
       position: absolute;
@@ -1176,6 +1182,7 @@ body {
 
     &:hover {
       background-color: $color-white;
+      transform: translateY(-5px);
 
       &::before {
         color: $color-primary;
@@ -1189,9 +1196,14 @@ body {
   opacity: 0.7;
 
   a {
-    margin-left: 5px;
-    color: $color-text;
+    color: $color-white;
     text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+      color: $color-text;
+      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    }
   }
 }
 // === / CONTACTS ===
