@@ -55,13 +55,23 @@ window.addEventListener("scroll", () => {
 
   for (let i = 0; i < sections.length; i++) {
     let sectionPosition = sections[i].offsetTop;
+    let navItems = document.querySelectorAll(".nav__item");
 
     if (sectionPosition - header.clientHeight < scrollDistance) {
       for (let navLink of navLinks) {
         navLink.classList.remove("nav__link--active");
       }
 
-      let navItems = document.querySelectorAll(".nav__item");
+      navItems[i].querySelector("a").classList.add("nav__link--active");
+    }
+
+    let contacts = document.querySelector(".contacts");
+    let contactsPosition = contacts.offsetTop - 200;
+
+    if (contactsPosition - header.clientHeight < scrollDistance) {
+      for (let navLink of navLinks) {
+        navLink.classList.remove("nav__link--active");
+      }
 
       navItems[i].querySelector("a").classList.add("nav__link--active");
     }
@@ -211,7 +221,7 @@ let swiper = new Swiper(".skills", {
   grabCursor: true,
   keyboard: true,
 
-  // Стоп при наведении
+  // Стоп при наведении вар 1
   /* on: {
     init() {
       this.el.addEventListener("mouseover", () => {
@@ -225,7 +235,7 @@ let swiper = new Swiper(".skills", {
   }, */
 });
 
-// Стоп при наведении
+// Стоп при наведении вар 2
 
 skills.addEventListener("mouseover", () => {
   swiper.autoplay.stop();
