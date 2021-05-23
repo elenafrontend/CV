@@ -182,7 +182,7 @@ var typed = new Typed(".typed", {
 let swiper = new Swiper(".skills", {
   loop: true,
   speed: 3000,
-  slidesPerView: 2.5,
+  slidesPerView: 2,
 
   autoplay: {
     delay: 0,
@@ -192,7 +192,7 @@ let swiper = new Swiper(".skills", {
   breakpoints: {
     // when window width is >= 400px
     400: {
-      slidesPerView: 3.5,
+      slidesPerView: 3,
     },
 
     576: {
