@@ -850,7 +850,7 @@ body {
     position: relative;
     height: 100%;
     margin: 0;
-    color: $color-white;
+    // color: $color-white;
     font-weight: $fw-regular;
     border: 1px solid $color-grey;
     transform-style: preserve-3d;
@@ -908,7 +908,6 @@ body {
       justify-content: center;
       align-items: center;
       position: relative;
-      z-index: 1;
       // min-height: 300px;
       padding: 25% 10%;
       transform-style: preserve-3d;
@@ -943,7 +942,7 @@ body {
 
     &-link {
       display: inline-block;
-      color: $color-text;
+      color: $color-white;
       font-size: $fs-xs;
       font-weight: $fw-regular;
       letter-spacing: 0.8px;
@@ -955,12 +954,15 @@ body {
       }
 
       &::after {
-        width: 100%;
+        width: 0;
       }
 
       &:hover {
+        color: $color-text;
+        text-shadow: 0 0 3px rgba(85, 87, 215, 0.2);
+
         &::after {
-          width: 0;
+          width: 100%;
         }
       }
     }

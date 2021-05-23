@@ -908,7 +908,6 @@ body {
   position: relative;
   height: 100%;
   margin: 0;
-  color: #ffffff;
   font-weight: 400;
   border: 1px solid #f8f2ff;
   -webkit-transform-style: preserve-3d;
@@ -984,7 +983,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 1;
   padding: 25% 10%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -1029,7 +1027,7 @@ body {
 
 .portfolio__card-link {
   display: inline-block;
-  color: #272341;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.8px;
@@ -1046,11 +1044,16 @@ body {
 }
 
 .portfolio__card-link::after {
-  width: 100%;
+  width: 0;
+}
+
+.portfolio__card-link:hover {
+  color: #272341;
+  text-shadow: 0 0 3px rgba(85, 87, 215, 0.2);
 }
 
 .portfolio__card-link:hover::after {
-  width: 0;
+  width: 100%;
 }
 
 .experience {
