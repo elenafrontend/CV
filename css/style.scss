@@ -262,18 +262,18 @@ body {
   @extend %shadow;
 
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 50px);
   visibility: hidden;
   transition: opacity 0.7s, transform 0.7s, visibility 0.7s;
 
   &--active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 50px);
     visibility: visible;
   }
 
@@ -850,7 +850,7 @@ body {
     position: relative;
     height: 100%;
     margin: 0;
-    // color: $color-white;
+    color: $color-white;
     font-weight: $fw-regular;
     border: 1px solid $color-grey;
     transform-style: preserve-3d;
@@ -881,8 +881,10 @@ body {
         transform: translate3d(0, 0, 40px);
       }
 
+      // #{$parent}-title,
       #{$parent}-description,
       #{$parent}-link {
+        // opacity: 1;
         transform: translate(0, 0);
       }
     }
@@ -908,14 +910,16 @@ body {
       justify-content: center;
       align-items: center;
       position: relative;
-      // min-height: 300px;
-      padding: 25% 10%;
+      z-index: 1;
+      min-height: 300px;
+      padding: 20% 10%;
       transform-style: preserve-3d;
       overflow: hidden;
       opacity: 0;
 
       @include breakpoint-max(sm) {
         padding: 20% 5%;
+        min-height: auto;
       }
     }
 

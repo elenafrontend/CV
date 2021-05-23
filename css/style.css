@@ -193,13 +193,13 @@ body {
 
 .header {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translate3d(0, -100%, 50px);
+          transform: translate3d(0, -100%, 50px);
   visibility: hidden;
   -webkit-transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
   transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
@@ -209,8 +209,8 @@ body {
 
 .header--active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 50px);
+          transform: translate3d(0, 0, 50px);
   visibility: visible;
 }
 
@@ -908,6 +908,7 @@ body {
   position: relative;
   height: 100%;
   margin: 0;
+  color: #ffffff;
   font-weight: 400;
   border: 1px solid #f8f2ff;
   -webkit-transform-style: preserve-3d;
@@ -983,7 +984,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding: 25% 10%;
+  z-index: 1;
+  min-height: 300px;
+  padding: 20% 10%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   overflow: hidden;
@@ -993,6 +996,7 @@ body {
 @media (max-width: 575px) {
   .portfolio__card-about {
     padding: 20% 5%;
+    min-height: auto;
   }
 }
 
