@@ -873,7 +873,7 @@ body {
       }
 
       #{$parent}-img img {
-        transform: scale(1.1);
+        transform: scale(1.3);
       }
 
       #{$parent}-about {
@@ -881,10 +881,8 @@ body {
         transform: translate3d(0, 0, 40px);
       }
 
-      // #{$parent}-title,
       #{$parent}-description,
       #{$parent}-link {
-        // opacity: 1;
         transform: translate(0, 0);
       }
     }
@@ -899,7 +897,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: 0.25s ease-in-out;
+        transition: 0.5s ease-in-out;
       }
     }
     &-about {
