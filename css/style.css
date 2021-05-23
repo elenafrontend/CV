@@ -97,7 +97,7 @@ body {
 }
 
 .text-color {
-  color: #7510f7;
+  color: #5557d7;
   /* background-image: linear-gradient(135deg, #5d21f7, #8a4dd8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -118,7 +118,7 @@ body {
   bottom: 0;
   width: 70px;
   height: 4px;
-  background-color: #7510f7;
+  background-color: #5557d7;
 }
 
 .subtitle {
@@ -133,10 +133,10 @@ body {
 .btn {
   position: relative;
   padding: 8px 16px;
-  color: #7510f7;
+  color: #5557d7;
   font-size: 16px;
   line-height: 1;
-  border: 2px solid #7510f7;
+  border: 2px solid #5557d7;
   font-weight: 700;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -177,7 +177,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #7510f7;
+  background-color: #5557d7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -259,7 +259,7 @@ body {
   position: absolute;
   bottom: -2px;
   left: 100%;
-  color: #7510f7;
+  color: #5557d7;
 }
 
 .burger {
@@ -433,7 +433,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #7510f7;
+  background-color: #5557d7;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -727,7 +727,7 @@ body {
 
 .certificates__item:hover {
   color: #ffffff;
-  background-color: #7510f7;
+  background-color: #5557d7;
 }
 
 .certificates__item:hover p {
@@ -803,7 +803,7 @@ body {
 }
 
 .skills__item:hover {
-  color: #7510f7;
+  color: #5557d7;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
@@ -1120,7 +1120,7 @@ body {
   left: -70px;
   width: 3px;
   height: 50%;
-  background-color: #7510f7;
+  background-color: #5557d7;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1164,7 +1164,7 @@ body {
 
 .experience__card:hover, .experience__card:focus {
   color: #ffffff;
-  background-color: #7510f7;
+  background-color: #5557d7;
 }
 
 .experience__card::before, .experience__card::after {
@@ -1192,7 +1192,7 @@ body {
 .experience__card::after {
   width: 20px;
   height: 20px;
-  border: 2px solid #7510f7;
+  border: 2px solid #5557d7;
   border-radius: 50%;
 }
 
@@ -1214,7 +1214,7 @@ body {
 .contacts {
   color: #ffffff;
   text-align: center;
-  background-color: #7510f7;
+  background-color: #5557d7;
 }
 
 .contacts__container {
@@ -1302,7 +1302,7 @@ body {
 }
 
 .contacts__link:hover::before {
-  color: #7510f7;
+  color: #5557d7;
 }
 
 .copyright {
