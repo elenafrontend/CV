@@ -539,25 +539,16 @@ body {
 .about__photo {
   position: relative;
   margin-right: 150px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
 }
 
-.about__photo:hover {
-  margin-left: 40px;
-  margin-right: 110px;
-}
-
-@media (max-width: 991px) {
-  .about__photo:hover {
-    margin-left: 30px;
-    margin-right: 70px;
-  }
+.about__photo:hover .about__photo-wrapper {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
 }
 
 .about__photo:hover::after {
   top: 10%;
-  right: 10%;
+  right: 0;
 }
 
 .about__photo:hover img {
@@ -595,8 +586,8 @@ body {
   top: -10%;
   right: -10%;
   border: 7px solid #f8f2ff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -610,8 +601,8 @@ body {
   height: 350px;
   margin: 0;
   overflow: hidden;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 
 @media (max-width: 991px) {

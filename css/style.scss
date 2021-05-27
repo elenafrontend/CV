@@ -555,20 +555,15 @@ body {
   &__photo {
     position: relative;
     margin-right: 150px;
-    transition: 0.7s;
 
     &:hover {
-      margin-left: 40px;
-      margin-right: 110px;
-
-      @include breakpoint-max(lg) {
-        margin-left: 30px;
-        margin-right: 70px;
+      & .about__photo-wrapper {
+        transform: translateX(10%);
       }
 
       &::after {
         top: 10%;
-        right: 10%;
+        right: 0;
       }
 
       & img {
@@ -602,7 +597,7 @@ body {
       top: -10%;
       right: -10%;
       border: 7px solid $color-grey;
-      transition: 0.5s;
+      transition: 0.5s ease-in-out;
 
       @include breakpoint-max(md) {
         display: none;
@@ -617,7 +612,7 @@ body {
       height: 350px;
       margin: 0;
       overflow: hidden;
-      transition: 1.5s;
+      transition: 0.7s ease-in-out;
 
       @include breakpoint-max(lg) {
         width: 250px;
