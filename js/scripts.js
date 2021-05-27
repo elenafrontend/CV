@@ -203,7 +203,7 @@ window.addEventListener("resize", resetNav);
 var typed = new Typed(".typed", {
   strings: ["Lena", "Gumerova Elena"],
   typeSpeed: 90,
-  startDelay: 1000,
+  startDelay: 1800,
   backSpeed: 60,
 
   onComplete: (self) => {

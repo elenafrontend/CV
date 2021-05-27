@@ -24,6 +24,12 @@
           box-shadow: 1px 1px 9px 0 rgba(209, 206, 216, 0.5);
 }
 
+.scroll-right, .scroll-bottom {
+  opacity: 0;
+  -webkit-transition: 1.2s ease-in-out;
+  transition: 1.2s ease-in-out;
+}
+
 *,
 :after,
 :before {
@@ -162,13 +168,6 @@ body {
 
 .btn--big {
   font-size: 24px;
-  opacity: 0;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
-  -webkit-transition: opacity 1s ease 0.5s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1s ease 0.5s;
-  transition: opacity 1s ease 0.5s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1s ease 0.5s;
-  transition: transform 1s ease 0.5s, opacity 1s ease 0.5s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: transform 1s ease 0.5s, opacity 1s ease 0.5s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1s ease 0.5s;
 }
 
 @media (max-width: 767px) {
@@ -197,6 +196,30 @@ body {
 
 .btn:hover::after, .btn:focus::after {
   left: 0;
+}
+
+.scroll-right {
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+}
+
+.scroll-item--active.scroll-right,
+.scroll-item--active .scroll-right {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-bottom {
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
+.scroll-item--active.scroll-bottom,
+.scroll-item--active .scroll-bottom {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .header {
@@ -518,6 +541,15 @@ body {
   .greeting__text {
     line-height: 1.5;
   }
+}
+
+.greeting__btn {
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  -webkit-transition: opacity 0.8s ease 1s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s ease-in-out 0.6s;
+  transition: opacity 0.8s ease 1s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s ease-in-out 0.6s;
+  transition: transform 1.2s ease-in-out 0.6s, opacity 0.8s ease 1s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s ease-in-out 0.6s, opacity 0.8s ease 1s, color 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s ease-in-out 0.6s;
 }
 
 .about__container {
