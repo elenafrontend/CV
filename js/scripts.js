@@ -36,6 +36,41 @@ const isMobile = {
   },
 };
 
+// -----------  scroll animation  -----------
+
+const scrollItems = document.querySelectorAll(".scroll-item");
+
+if (scrollItems.length > 0) {
+  setTimeout(() => {
+    showScrollAnim();
+  }, 500);
+
+  window.addEventListener("scroll", showScrollAnim);
+
+  function showScrollAnim() {
+    for (let scrollItem of scrollItems) {
+      // высота элемента
+      const scrollItemHeight = scrollItem.offsetHeight;
+      // положение на странице (прокрутка страницы top окна + положение элемента относительно окна)
+      const scrollItemOffset =
+        pageYOffset + scrollItem.getBoundingClientRect().top;
+      // при прокрутке на какую часть элемента показываем его на странице (прокрутив 4 часть элемента)
+      const scrollItemPart = 4;
+
+      // определяем точку появления элемента - после появления в окне четверти элемента
+      let viewPoint = window.innerHeight - scrollItemHeight / scrollItemPart;
+      // если элемент больше окна, при прокрутке четверти окна
+      if (scrollItemHeight > window.innerHeight) {
+        viewPoint = window.innerHeight - window.innerHeight / scrollItemPart;
+      }
+
+      if (pageYOffset > scrollItemOffset - viewPoint) {
+        scrollItem.classList.add("scroll-item--active");
+      }
+    }
+  }
+}
+
 // -----------  header appearance  -----------
 window.onscroll = function () {
   if (window.pageYOffset > 100) {
