@@ -1055,17 +1055,9 @@ body {
   }
 }
 
-.portfolio__card-link::after {
-  width: 0;
-}
-
 .portfolio__card-link:hover {
   color: #272341;
   text-shadow: 0 0 3px rgba(85, 87, 215, 0.2);
-}
-
-.portfolio__card-link:hover::after {
-  width: 100%;
 }
 
 .experience {

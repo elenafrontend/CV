@@ -962,17 +962,9 @@ body {
         font-size: $fs-xxs;
       }
 
-      &::after {
-        width: 0;
-      }
-
       &:hover {
         color: $color-text;
         text-shadow: 0 0 3px rgba(85, 87, 215, 0.2);
-
-        &::after {
-          width: 100%;
-        }
       }
     }
   }
