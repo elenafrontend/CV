@@ -815,6 +815,11 @@ body {
   padding-bottom: 70px;
   border-bottom: 2px solid #f8f2ff;
   overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .skills__list {

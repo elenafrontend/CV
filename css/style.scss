@@ -785,6 +785,10 @@ body {
   border-bottom: 2px solid $color-grey;
   overflow: hidden;
 
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 1s;
+
   &__list {
     @extend %list;
 
