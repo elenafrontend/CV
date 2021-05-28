@@ -1228,39 +1228,39 @@ body {
 }
 
 .experience__item:nth-child(2) .experience__card {
-  -webkit-transition: background-color 0.2s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
-  transition: background-color 0.2s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.5s, opacity 1.2s 0.5s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.5s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+  -webkit-transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
+  transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
 }
 
 .experience__item:nth-child(2) .experience__card::before, .experience__item:nth-child(2) .experience__card::after {
+  -webkit-transition: opacity 0.2s 1.5s;
+  transition: opacity 0.2s 1.5s;
+}
+
+.experience__item:nth-child(3) .experience__card {
+  -webkit-transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
+  transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
+}
+
+.experience__item:nth-child(3) .experience__card::before, .experience__item:nth-child(3) .experience__card::after {
   -webkit-transition: opacity 0.2s 1.7s;
   transition: opacity 0.2s 1.7s;
 }
 
-.experience__item:nth-child(3) .experience__card {
-  -webkit-transition: background-color 0.2s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
-  transition: background-color 0.2s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.8s, opacity 1.2s 0.8s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.8s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
-}
-
-.experience__item:nth-child(3) .experience__card::before, .experience__item:nth-child(3) .experience__card::after {
-  -webkit-transition: opacity 0.2s 2s;
-  transition: opacity 0.2s 2s;
-}
-
 .experience__item:nth-child(4) .experience__card {
-  -webkit-transition: background-color 0.2s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
-  transition: background-color 0.2s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
-  transition: background-color 0.2s, transform 1s ease-in-out 1s, opacity 1.2s 1s;
-  transition: background-color 0.2s, transform 1s ease-in-out 1s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
+  -webkit-transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
+  transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
 }
 
 .experience__item:nth-child(4) .experience__card::before, .experience__item:nth-child(4) .experience__card::after {
-  -webkit-transition: opacity 0.2s 2s;
-  transition: opacity 0.2s 2s;
+  -webkit-transition: opacity 0.2s 1.8s;
+  transition: opacity 0.2s 1.8s;
 }
 
 .experience__card {
@@ -1271,10 +1271,10 @@ body {
   text-decoration: none;
   background-color: #ffffff;
   opacity: 0;
-  -webkit-transition: background-color 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
-  transition: background-color 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.2s, opacity 1.2s 0.2s;
-  transition: background-color 0.2s, transform 1s ease-in-out 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
+  -webkit-transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
+  transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -1293,8 +1293,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: opacity 0.2s 1.5s;
-  transition: opacity 0.2s 1.5s;
+  -webkit-transition: opacity 0.2s 1s;
+  transition: opacity 0.2s 1s;
 }
 
 .scroll-item--active .experience__card::before, .scroll-item--active .experience__card::after {

@@ -1107,8 +1107,18 @@ body {
     }
 
     &:nth-child(2) .experience__card {
-      transition: background-color 0.2s, transform 1s ease-in-out 0.5s,
-        opacity 1.2s 0.5s;
+      transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s,
+        opacity 0.7s 0.5s;
+
+      &::before,
+      &::after {
+        transition: opacity 0.2s 1.5s;
+      }
+    }
+
+    &:nth-child(3) .experience__card {
+      transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s,
+        opacity 0.7s 0.8s;
 
       &::before,
       &::after {
@@ -1116,23 +1126,13 @@ body {
       }
     }
 
-    &:nth-child(3) .experience__card {
-      transition: background-color 0.2s, transform 1s ease-in-out 0.8s,
-        opacity 1.2s 0.8s;
-
-      &::before,
-      &::after {
-        transition: opacity 0.2s 2s;
-      }
-    }
-
     &:nth-child(4) .experience__card {
-      transition: background-color 0.2s, transform 1s ease-in-out 1s,
-        opacity 1.2s 1s;
+      transition: background-color 0.2s, transform 0.7s ease-in-out 1s,
+        opacity 0.7s 1s;
 
       &::before,
       &::after {
-        transition: opacity 0.2s 2s;
+        transition: opacity 0.2s 1.8s;
       }
     }
   }
@@ -1147,8 +1147,8 @@ body {
     text-decoration: none;
     background-color: $color-white;
     opacity: 0;
-    transition: background-color 0.2s, transform 1s ease-in-out 0.2s,
-      opacity 1.2s 0.2s;
+    transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s,
+      opacity 0.5s 0.2s;
     transform: translateX(50%);
 
     &:hover,
@@ -1166,7 +1166,7 @@ body {
       left: -70px;
       transform: translate(-50%, -50%);
       opacity: 0;
-      transition: opacity 0.2s 1.5s;
+      transition: opacity 0.2s 1s;
 
       .scroll-item--active & {
         opacity: 1;
