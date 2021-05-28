@@ -28,10 +28,6 @@
   box-shadow: 1px 1px 9px 0 rgba(209, 206, 216, 0.5);
 }
 
-%scroll {
-  opacity: 0;
-  transition: 1.2s ease-in-out;
-}
 // === / PLACEHOLDERS ===
 
 // === VARIABLES ===
@@ -261,30 +257,6 @@ body {
       -webkit-text-fill-color: $color-white;
     }
   } */
-}
-
-// Scroll animation
-
-.scroll-right {
-  @extend %scroll;
-  transform: translateX(-5%);
-}
-
-.scroll-item--active.scroll-right,
-.scroll-item--active .scroll-right {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.scroll-bottom {
-  @extend %scroll;
-  transform: translateY(15%);
-}
-
-.scroll-item--active.scroll-bottom,
-.scroll-item--active .scroll-bottom {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 // === HEADER ===
@@ -544,6 +516,9 @@ body {
     font-size: $fs-xxl;
     font-weight: $fw-bold;
     line-height: 1.2;
+    opacity: 0;
+    transform: translateX(-5%);
+    transition: 1s ease-in-out;
 
     @include breakpoint-max(xl) {
       font-size: 45px;
@@ -563,6 +538,7 @@ body {
   }
 
   &__btn {
+    opacity: 0;
     transform: translateX(-30%);
     transition: transform 1.2s ease-in-out 0.6s, opacity 0.8s ease 1s,
       color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -626,7 +602,12 @@ body {
       top: -10%;
       right: -10%;
       border: 7px solid $color-grey;
+      opacity: 0;
       transition: 0.5s ease-in-out;
+
+      .scroll-item--active & {
+        opacity: 1;
+      }
 
       @include breakpoint-max(md) {
         display: none;
@@ -641,6 +622,8 @@ body {
       height: 350px;
       margin: 0;
       overflow: hidden;
+      opacity: 0;
+      transform: translateX(-10%);
       transition: 0.7s ease-in-out;
 
       @include breakpoint-max(lg) {
@@ -668,7 +651,9 @@ body {
 
   &__content {
     flex-grow: 1;
-    transition-delay: 0.8s;
+    opacity: 0;
+    transform: translateY(15%);
+    transition: 0.7s ease-in-out 0.8s;
   }
 
   &__text {
@@ -1236,3 +1221,13 @@ body {
   }
 }
 // === / CONTACTS ===
+
+// === Scroll animation ===
+
+.scroll-item--active,
+.scroll-item--active .scroll-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+// === / Scroll animation ===
