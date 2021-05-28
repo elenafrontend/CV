@@ -657,8 +657,8 @@ body {
   opacity: 0;
   -webkit-transform: translateY(15%);
           transform: translateY(15%);
-  -webkit-transition: 0.7s ease-in-out 0.8s;
-  transition: 0.7s ease-in-out 0.8s;
+  -webkit-transition: 0.7s ease-in-out 0.5s;
+  transition: 0.7s ease-in-out 0.5s;
 }
 
 .about__text {

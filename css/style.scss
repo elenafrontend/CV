@@ -653,7 +653,7 @@ body {
     flex-grow: 1;
     opacity: 0;
     transform: translateY(15%);
-    transition: 0.7s ease-in-out 0.8s;
+    transition: 0.7s ease-in-out 0.5s;
   }
 
   &__text {
@@ -828,6 +828,10 @@ body {
   text-align: center;
 
   &__title {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 1.2s ease-in-out;
+
     &::after {
       left: 50%;
       width: 90px;
@@ -838,6 +842,10 @@ body {
   &__subtitle {
     margin: 0;
     margin-bottom: 40px;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 1.2s ease-in-out 0.5s;
   }
 
   &__list {
@@ -855,6 +863,10 @@ body {
   &__item {
     flex-basis: 30%;
     margin-top: 50px;
+
+    opacity: 0;
+    transform: scale(0);
+    transition: 1.2s ease-in-out;
 
     @include breakpoint-max(xl) {
       flex-basis: 32%;
@@ -1252,6 +1264,7 @@ body {
 .scroll-item--active,
 .scroll-item--active .scroll-show {
   transform: translate(0, 0);
+  transform: scale(1);
   opacity: 1;
 }
 
