@@ -1357,6 +1357,9 @@ body {
 .contacts__logo {
   margin-bottom: 25px;
   color: #ffffff;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contacts__logo::before {
@@ -1369,6 +1372,14 @@ body {
   margin-bottom: 60px;
   font-size: 24px;
   line-height: 1.4;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contacts__slogan.scroll-item--active {
   opacity: 0.7;
 }
 
@@ -1400,8 +1411,13 @@ body {
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
+  transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
 }
 
 @media (max-width: 399px) {
@@ -1419,13 +1435,13 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.contacts__link:hover {
+.contacts__link:hover, .contacts__link:hover.scroll-show {
   background-color: #ffffff;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-.contacts__link:hover::before {
+.contacts__link:hover::before, .contacts__link:hover.scroll-show::before {
   color: #5557d7;
 }
 

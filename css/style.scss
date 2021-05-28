@@ -1224,6 +1224,9 @@ body {
     margin-bottom: 25px;
     color: $color-white;
 
+    opacity: 0;
+    transition: 0.5s;
+
     &::before {
       color: $color-white;
     }
@@ -1235,7 +1238,14 @@ body {
     margin-bottom: 60px;
     font-size: $fs-m;
     line-height: 1.4;
-    opacity: 0.7;
+
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 0.5s;
+
+    &.scroll-item--active {
+      opacity: 0.7;
+    }
   }
 
   &__list {
@@ -1262,7 +1272,11 @@ body {
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    transition: 0.5s;
+
+    opacity: 0;
+    transform: translateY(20%);
+    transition: background-color 0.5s, transform 0.5s ease 0.2s,
+      opacity 0.5s 0.2s;
 
     @include breakpoint-max(xs) {
       width: 40px;
@@ -1276,7 +1290,8 @@ body {
       transform: translate(-50%, -50%);
     }
 
-    &:hover {
+    &:hover,
+    &:hover.scroll-show {
       background-color: $color-white;
       transform: translateY(-5px);
 
