@@ -678,6 +678,9 @@ body {
 
 .certificates__title {
   margin-bottom: 60px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .certificates__list {
@@ -693,21 +696,6 @@ body {
 .certificates__item {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 50px 15px;
-  text-align: center;
-  background-color: #ffffff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 @media (max-width: 991px) {
@@ -740,17 +728,56 @@ body {
   }
 }
 
-.certificates__item::before {
+.certificates__item:nth-child(2) .certificates__card {
+  -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+}
+
+.certificates__item:nth-child(3) .certificates__card {
+  -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+}
+
+.certificates__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px 15px;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+.certificates__card::before {
   margin-bottom: 30px;
   font-size: 45px;
 }
 
-.certificates__item:hover {
+.certificates__card:hover {
   color: #ffffff;
   background-color: #5557d7;
 }
 
-.certificates__item:hover p {
+.certificates__card:hover p {
   color: #ffffff;
 }
 
