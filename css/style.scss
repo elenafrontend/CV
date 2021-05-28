@@ -786,9 +786,9 @@ body {
   &__container {
     padding-top: 70px;
     padding-bottom: 70px;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: 1s;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 1s;
   }
 
   &__list {
@@ -1023,6 +1023,7 @@ body {
 // === EXPERIENCE ===
 .experience {
   background-color: $color-grey;
+  overflow: hidden;
 
   &__inner {
     display: flex;
@@ -1040,6 +1041,9 @@ body {
 
   &__title {
     min-width: 40%;
+
+    opacity: 0;
+    transition: 1.5s;
   }
 
   &__list {
@@ -1081,15 +1085,15 @@ body {
     }
 
     &::before {
-      top: 50%;
-    }
-
-    &::after {
       bottom: 50%;
     }
 
+    &::after {
+      top: 50%;
+    }
+
     &:first-child {
-      &::after {
+      &::before {
         display: none;
       }
     }
@@ -1097,8 +1101,38 @@ body {
     &:last-child {
       padding-bottom: 0;
 
-      &::before {
+      &::after {
         display: none;
+      }
+    }
+
+    &:nth-child(2) .experience__card {
+      transition: background-color 0.2s, transform 1s ease-in-out 0.5s,
+        opacity 1.2s 0.5s;
+
+      &::before,
+      &::after {
+        transition: opacity 0.2s 1.7s;
+      }
+    }
+
+    &:nth-child(3) .experience__card {
+      transition: background-color 0.2s, transform 1s ease-in-out 0.8s,
+        opacity 1.2s 0.8s;
+
+      &::before,
+      &::after {
+        transition: opacity 0.2s 2s;
+      }
+    }
+
+    &:nth-child(4) .experience__card {
+      transition: background-color 0.2s, transform 1s ease-in-out 1s,
+        opacity 1.2s 1s;
+
+      &::before,
+      &::after {
+        transition: opacity 0.2s 2s;
       }
     }
   }
@@ -1112,7 +1146,10 @@ body {
     color: $color-text;
     text-decoration: none;
     background-color: $color-white;
-    transition: 0.2s;
+    opacity: 0;
+    transition: background-color 0.2s, transform 1s ease-in-out 0.2s,
+      opacity 1.2s 0.2s;
+    transform: translateX(50%);
 
     &:hover,
     &:focus {
@@ -1128,6 +1165,12 @@ body {
       top: 50%;
       left: -70px;
       transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s 1.5s;
+
+      .scroll-item--active & {
+        opacity: 1;
+      }
 
       @include breakpoint-max(xs) {
         left: -30px;

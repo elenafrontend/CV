@@ -731,19 +731,15 @@ body {
 .certificates__item:nth-child(2) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
   transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
- opacity 0.8s 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
- opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
 }
 
 .certificates__item:nth-child(3) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
   transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
- opacity 0.8s 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
- opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
 }
 
 .certificates__card {
@@ -765,10 +761,8 @@ body {
   opacity: 0;
   -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
- opacity 0.8s 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
- opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
@@ -1133,6 +1127,7 @@ body {
 
 .experience {
   background-color: #f8f2ff;
+  overflow: hidden;
 }
 
 .experience__inner {
@@ -1160,6 +1155,9 @@ body {
 
 .experience__title {
   min-width: 40%;
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .experience__list {
@@ -1210,14 +1208,14 @@ body {
 }
 
 .experience__item::before {
-  top: 50%;
-}
-
-.experience__item::after {
   bottom: 50%;
 }
 
-.experience__item:first-child::after {
+.experience__item::after {
+  top: 50%;
+}
+
+.experience__item:first-child::before {
   display: none;
 }
 
@@ -1225,8 +1223,44 @@ body {
   padding-bottom: 0;
 }
 
-.experience__item:last-child::before {
+.experience__item:last-child::after {
   display: none;
+}
+
+.experience__item:nth-child(2) .experience__card {
+  -webkit-transition: background-color 0.2s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+  transition: background-color 0.2s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.5s, opacity 1.2s 0.5s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.5s, opacity 1.2s 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+}
+
+.experience__item:nth-child(2) .experience__card::before, .experience__item:nth-child(2) .experience__card::after {
+  -webkit-transition: opacity 0.2s 1.7s;
+  transition: opacity 0.2s 1.7s;
+}
+
+.experience__item:nth-child(3) .experience__card {
+  -webkit-transition: background-color 0.2s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
+  transition: background-color 0.2s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.8s, opacity 1.2s 0.8s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.8s, opacity 1.2s 0.8s, -webkit-transform 1s ease-in-out 0.8s;
+}
+
+.experience__item:nth-child(3) .experience__card::before, .experience__item:nth-child(3) .experience__card::after {
+  -webkit-transition: opacity 0.2s 2s;
+  transition: opacity 0.2s 2s;
+}
+
+.experience__item:nth-child(4) .experience__card {
+  -webkit-transition: background-color 0.2s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
+  transition: background-color 0.2s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
+  transition: background-color 0.2s, transform 1s ease-in-out 1s, opacity 1.2s 1s;
+  transition: background-color 0.2s, transform 1s ease-in-out 1s, opacity 1.2s 1s, -webkit-transform 1s ease-in-out 1s;
+}
+
+.experience__item:nth-child(4) .experience__card::before, .experience__item:nth-child(4) .experience__card::after {
+  -webkit-transition: opacity 0.2s 2s;
+  transition: opacity 0.2s 2s;
 }
 
 .experience__card {
@@ -1236,8 +1270,13 @@ body {
   color: #272341;
   text-decoration: none;
   background-color: #ffffff;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  opacity: 0;
+  -webkit-transition: background-color 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
+  transition: background-color 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.2s, opacity 1.2s 0.2s;
+  transition: background-color 0.2s, transform 1s ease-in-out 0.2s, opacity 1.2s 0.2s, -webkit-transform 1s ease-in-out 0.2s;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .experience__card:hover, .experience__card:focus {
@@ -1253,6 +1292,13 @@ body {
   left: -70px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 1.5s;
+  transition: opacity 0.2s 1.5s;
+}
+
+.scroll-item--active .experience__card::before, .scroll-item--active .experience__card::after {
+  opacity: 1;
 }
 
 @media (max-width: 399px) {
