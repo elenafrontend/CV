@@ -214,7 +214,7 @@ var typed = new Typed(".typed", {
 // -----------  sliders  -----------
 
 // Инициализируем swiper
-let swiper = new Swiper(".skills", {
+let swiper = new Swiper(".skills__container", {
   loop: true,
   speed: 3000,
   slidesPerView: 2,

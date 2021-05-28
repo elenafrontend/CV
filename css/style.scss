@@ -780,14 +780,16 @@ body {
 
 // === SKILLS ===
 .skills {
-  padding-top: 70px;
-  padding-bottom: 70px;
   border-bottom: 2px solid $color-grey;
   overflow: hidden;
 
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
   opacity: 0;
   transform: translateX(100%);
   transition: 1s;
+  }
 
   &__list {
     @extend %list;
