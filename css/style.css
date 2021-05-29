@@ -508,7 +508,7 @@ body {
 
 @media (max-width: 767px) {
   .greeting__text {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
@@ -731,19 +731,15 @@ body {
 .certificates__item:nth-child(2) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
   transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
- opacity 0.8s 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
- opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
 }
 
 .certificates__item:nth-child(3) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
   transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
- opacity 0.8s 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
- opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
 }
 
 .certificates__card {
@@ -765,10 +761,8 @@ body {
   opacity: 0;
   -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
- opacity 0.8s 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
- opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
@@ -1236,10 +1230,8 @@ body {
 .experience__item:nth-child(2) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
   transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s,
- opacity 0.7s 0.5s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s,
- opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
 }
 
 .experience__item:nth-child(2) .experience__card::before, .experience__item:nth-child(2) .experience__card::after {
@@ -1250,10 +1242,8 @@ body {
 .experience__item:nth-child(3) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
   transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s,
- opacity 0.7s 0.8s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s,
- opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
 }
 
 .experience__item:nth-child(3) .experience__card::before, .experience__item:nth-child(3) .experience__card::after {
@@ -1264,10 +1254,8 @@ body {
 .experience__item:nth-child(4) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
   transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 1s,
- opacity 0.7s 1s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 1s,
- opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
 }
 
 .experience__item:nth-child(4) .experience__card::before, .experience__item:nth-child(4) .experience__card::after {
@@ -1285,10 +1273,8 @@ body {
   opacity: 0;
   -webkit-transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
   transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s,
- opacity 0.5s 0.2s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s,
- opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -1430,10 +1416,8 @@ body {
           transform: translateY(20%);
   -webkit-transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
   transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
-  transition: background-color 0.5s, transform 0.5s ease 0.2s,
- opacity 0.5s 0.2s;
-  transition: background-color 0.5s, transform 0.5s ease 0.2s,
- opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
 }
 
 @media (max-width: 399px) {
