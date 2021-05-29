@@ -100,6 +100,10 @@ $breakpoints: (
 }
 // === / MIXINS ===
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 :after,
 :before {

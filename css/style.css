@@ -24,6 +24,10 @@
           box-shadow: 1px 1px 9px 0 rgba(209, 206, 216, 0.5);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 :after,
 :before {
