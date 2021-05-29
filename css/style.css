@@ -698,11 +698,32 @@ body {
       flex-basis: 30%;
 }
 
+.certificates__item:nth-child(2) .certificates__card {
+  -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+}
+
+.certificates__item:nth-child(3) .certificates__card {
+  -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+}
+
 @media (max-width: 991px) {
   .certificates__item {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     margin-bottom: 35px;
+  }
+  .certificates__item:nth-child(2) .certificates__card,
+  .certificates__item:nth-child(3) .certificates__card {
+    -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+    transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
+    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   }
 }
 
@@ -726,20 +747,6 @@ body {
         flex-basis: 100%;
     padding: 30px 15px;
   }
-}
-
-.certificates__item:nth-child(2) .certificates__card {
-  -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-}
-
-.certificates__item:nth-child(3) .certificates__card {
-  -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
-  transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
 }
 
 .certificates__card {
