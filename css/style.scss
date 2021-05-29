@@ -52,7 +52,9 @@ $color-primary: #5557d7;
 // #7446af
 $color-text: #272341;
 $color-white: #ffffff;
-$color-grey: #f8f2ff;
+$color-grey: #f7f7f7;
+// #f5f5f9;
+// #f8f2ff;
 $color-dark-grey: #c2c2c2;
 
 $transition: 0.3s;
@@ -601,7 +603,7 @@ body {
       height: 100%;
       top: -10%;
       right: -10%;
-      border: 7px solid $color-grey;
+      border: 5px solid $color-grey;
       opacity: 0;
       transition: 0.5s ease-in-out;
 
