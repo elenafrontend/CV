@@ -261,6 +261,16 @@ body {
   } */
 }
 
+// === 	ANIMATION ===
+
+@keyframes up-down {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+// === 	/ ANIMATION ===
+
 // === HEADER ===
 .header {
   @extend %shadow;
@@ -1225,7 +1235,7 @@ body {
 .contacts {
   color: $color-white;
   text-align: center;
-  background-color: $color-primary;
+  background-color: $color-text;
 
   &__container {
     display: flex;
@@ -1315,6 +1325,48 @@ body {
   }
 }
 
+.arrow-up {
+  @extend %btn;
+
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 45px;
+
+  animation-name: up-down;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+
+  &:hover {
+    animation-play-state: paused;
+
+    &::before,
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: $color-white;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+  }
+
+  &:before {
+    left: -50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-45deg);
+  }
+}
+
 .copyright {
   font-size: $fs-xxs;
   opacity: 0.7;
@@ -1325,8 +1377,8 @@ body {
     transition: $transition;
 
     &:hover {
-      color: $color-text;
-      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+      color: $color-primary;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -1341,4 +1393,4 @@ body {
   opacity: 1;
 }
 
-// === / Scroll animation ===
+// / Scroll animation ===
