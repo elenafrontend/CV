@@ -893,6 +893,10 @@ body {
     transform: scale(0);
     transition: 1.2s ease-in-out;
 
+    &.scroll-item--active {
+      transform: scale(1);
+    }
+
     @include breakpoint-max(xl) {
       flex-basis: 32%;
       margin-right: 50px;
@@ -1389,7 +1393,6 @@ body {
 .scroll-item--active,
 .scroll-item--active .scroll-show {
   transform: translate(0, 0);
-  transform: scale(1);
   opacity: 1;
 }
 

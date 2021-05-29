@@ -955,6 +955,11 @@ body {
   transition: 1.2s ease-in-out;
 }
 
+.portfolio__item.scroll-item--active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 @media (max-width: 1199px) {
   .portfolio__item {
     -ms-flex-preferred-size: 32%;
@@ -1541,7 +1546,5 @@ body {
 .scroll-item--active .scroll-show {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  -webkit-transform: scale(1);
-          transform: scale(1);
   opacity: 1;
 }
