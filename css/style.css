@@ -696,6 +696,7 @@ body {
 .certificates__item {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+  min-height: 335px;
 }
 
 .certificates__item:nth-child(2) .certificates__card {
@@ -745,7 +746,7 @@ body {
   .certificates__item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding: 30px 15px;
+    min-height: 300px;
   }
 }
 
@@ -786,6 +787,12 @@ body {
 
 .certificates__card:hover p {
   color: #ffffff;
+}
+
+@media (max-width: 399px) {
+  .certificates__card {
+    padding: 30px 15px;
+  }
 }
 
 .certificates__name {

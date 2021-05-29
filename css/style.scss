@@ -691,6 +691,7 @@ body {
 
   &__item {
     flex-basis: 30%;
+    min-height: 335px;
 
     &:nth-child(2) .certificates__card {
       transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
@@ -723,7 +724,7 @@ body {
 
     @include breakpoint-max(xs) {
       flex-basis: 100%;
-      padding: 30px 15px;
+      min-height: 300px;
     }
   }
 
@@ -756,6 +757,10 @@ body {
       p {
         color: $color-white;
       }
+    }
+
+    @include breakpoint-max(xs) {
+      padding: 30px 15px;
     }
   }
 
