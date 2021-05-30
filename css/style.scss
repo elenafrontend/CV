@@ -198,10 +198,6 @@ body {
   font-size: $fs-s;
 }
 
-.text {
-  line-height: 1.7;
-}
-
 .btn {
   @extend %btn;
   @extend %bdrs;
@@ -675,6 +671,7 @@ body {
   &__text {
     margin: 0;
     margin-bottom: 30px;
+    line-height: 2;
 
     @include breakpoint-max(sm) {
       &:last-of-type {

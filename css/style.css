@@ -130,10 +130,6 @@ body {
   font-size: 18px;
 }
 
-.text {
-  line-height: 1.7;
-}
-
 .btn {
   position: relative;
   padding: 8px 16px;
@@ -682,6 +678,7 @@ body {
 .about__text {
   margin: 0;
   margin-bottom: 30px;
+  line-height: 2;
 }
 
 @media (max-width: 575px) {
