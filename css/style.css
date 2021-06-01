@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 
-.btn, .about__photo::after, .about__photo-wrapper {
+.btn, .about__photo-wrapper {
   border-radius: 0px;
 }
 
@@ -560,7 +560,29 @@ body {
 
 .about__photo {
   position: relative;
-  margin-right: 150px;
+  margin-right: 120px;
+  /* &::after {
+      @extend %bdrs;
+
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: -10%;
+      right: -10%;
+      border: 5px solid $color-grey;
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+
+      .scroll-item--active & {
+        opacity: 1;
+      }
+
+      @include breakpoint-max(md) {
+        display: none;
+      }
+    } */
 }
 
 .about__photo:hover .about__photo-wrapper {
@@ -596,30 +618,6 @@ body {
 @media (max-width: 575px) {
   .about__photo {
     padding: 0;
-  }
-}
-
-.about__photo::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: -10%;
-  right: -10%;
-  border: 5px solid #f7f7f7;
-  opacity: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.scroll-item--active .about__photo::after {
-  opacity: 1;
-}
-
-@media (max-width: 767px) {
-  .about__photo::after {
-    display: none;
   }
 }
 
@@ -717,15 +715,19 @@ body {
 .certificates__item:nth-child(2) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
   transition: background-color 0.3s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1s, opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
+ opacity 0.8s 1s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1s,
+ opacity 0.8s 1s, -webkit-transform 0.6s ease-in-out 1s;
 }
 
 .certificates__item:nth-child(3) .certificates__card {
   -webkit-transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
   transition: background-color 0.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s, opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
+ opacity 0.8s 1.3s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 1.3s,
+ opacity 0.8s 1.3s, -webkit-transform 0.6s ease-in-out 1.3s;
 }
 
 @media (max-width: 991px) {
@@ -738,8 +740,10 @@ body {
   .certificates__item:nth-child(3) .certificates__card {
     -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
     transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
-    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
-    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
+ opacity 0.8s 0.5s;
+    transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
+ opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   }
 }
 
@@ -784,8 +788,10 @@ body {
   opacity: 0;
   -webkit-transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   transition: background-color 0.3s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s;
-  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s, opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
+ opacity 0.8s 0.5s;
+  transition: background-color 0.3s, transform 0.6s ease-in-out 0.5s,
+ opacity 0.8s 0.5s, -webkit-transform 0.6s ease-in-out 0.5s;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
@@ -1264,8 +1270,10 @@ body {
 .experience__item:nth-child(2) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
   transition: background-color 0.2s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s, opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s,
+ opacity 0.7s 0.5s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.5s,
+ opacity 0.7s 0.5s, -webkit-transform 0.7s ease-in-out 0.5s;
 }
 
 .experience__item:nth-child(2) .experience__card::before, .experience__item:nth-child(2) .experience__card::after {
@@ -1276,8 +1284,10 @@ body {
 .experience__item:nth-child(3) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
   transition: background-color 0.2s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s, opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s,
+ opacity 0.7s 0.8s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.8s,
+ opacity 0.7s 0.8s, -webkit-transform 0.7s ease-in-out 0.8s;
 }
 
 .experience__item:nth-child(3) .experience__card::before, .experience__item:nth-child(3) .experience__card::after {
@@ -1288,8 +1298,10 @@ body {
 .experience__item:nth-child(4) .experience__card {
   -webkit-transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
   transition: background-color 0.2s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 1s, opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s,
+ opacity 0.7s 1s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 1s,
+ opacity 0.7s 1s, -webkit-transform 0.7s ease-in-out 1s;
 }
 
 .experience__item:nth-child(4) .experience__card::before, .experience__item:nth-child(4) .experience__card::after {
@@ -1307,8 +1319,10 @@ body {
   opacity: 0;
   -webkit-transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
   transition: background-color 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s;
-  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s,
+ opacity 0.5s 0.2s;
+  transition: background-color 0.2s, transform 0.7s ease-in-out 0.2s,
+ opacity 0.5s 0.2s, -webkit-transform 0.7s ease-in-out 0.2s;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -1450,8 +1464,10 @@ body {
           transform: translateY(20%);
   -webkit-transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
   transition: background-color 0.5s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
-  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s;
-  transition: background-color 0.5s, transform 0.5s ease 0.2s, opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s,
+ opacity 0.5s 0.2s;
+  transition: background-color 0.5s, transform 0.5s ease 0.2s,
+ opacity 0.5s 0.2s, -webkit-transform 0.5s ease 0.2s;
 }
 
 @media (max-width: 399px) {

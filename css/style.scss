@@ -571,7 +571,7 @@ body {
 
   &__photo {
     position: relative;
-    margin-right: 150px;
+    margin-right: 120px;
 
     &:hover {
       & .about__photo-wrapper {
@@ -603,7 +603,7 @@ body {
       padding: 0;
     }
 
-    &::after {
+    /* &::after {
       @extend %bdrs;
 
       content: "";
@@ -615,7 +615,7 @@ body {
       right: -10%;
       border: 5px solid $color-grey;
       opacity: 0;
-      transition: 0.5s ease-in-out;
+      transition: 0.2s ease-in-out;
 
       .scroll-item--active & {
         opacity: 1;
@@ -624,7 +624,7 @@ body {
       @include breakpoint-max(md) {
         display: none;
       }
-    }
+    } */
 
     &-wrapper {
       @extend %bdrs;
