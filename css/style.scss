@@ -936,7 +936,7 @@ body {
     margin: 0;
     color: $color-white;
     font-weight: $fw-regular;
-    border: 1px solid $color-grey;
+    border: 2px solid $color-grey;
     transform-style: preserve-3d;
 
     &::after {
@@ -982,6 +982,13 @@ body {
         height: 100%;
         object-fit: cover;
         transition: 0.5s ease-in-out;
+
+        .portfolio__item:nth-child(1) & {
+          object-position: left bottom;
+        }
+        .portfolio__item:nth-child(4) & {
+          object-position: right bottom;
+        }
       }
     }
     &-about {
@@ -1006,6 +1013,7 @@ body {
     }
 
     &-title {
+      color: $color-primary;
       font-size: $fs-m;
       font-weight: 400;
 
